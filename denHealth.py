@@ -39,8 +39,19 @@ response_text = '''
 
 '''
 
-# Find the location details
-location_details = re.findall(r'<div class="list-results__content-block">(.+?)<br/>|<br/>(.+?)</div>\n<div class="list-results__content-block">', data)
-print(location_details)
+name = re.search(r'<div class="list-results__content-block">\s+(.*?)<br/>', response_text).group(1)
+address = re.search(r'<br/>(.*?)<br/>', response_text).group(1)
+location = re.search(r'<br/>(.*?)\n', response_text).group(1)
 
+#can only find one
+while True:
+    location = location.split("<br/>")[1]
+    print("Name:", name)
+    print("Address:", address)
+    print("Location:", location)
+    
+    if "<br/>" in location:
+        location = location.split("<br/>")[1]
+    else:
+        break
 
