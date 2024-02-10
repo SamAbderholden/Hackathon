@@ -1,6 +1,7 @@
 import csv
 from geopy.exc import GeocoderTimedOut
 from geopy.geocoders import Nominatim
+from urllib.parse import quote
 import folium
 import os
 
@@ -43,11 +44,16 @@ def create_map(urgent_care_list, userZip):
 
             lat = urgent_care['latitude']
             long = urgent_care['longitude']
+
+            # URL-encode the address
+            encoded_address = quote(address)
+            
+            # Modify the address line to include a clickable Google Maps link
             htmlFrag = f"""
-                <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; width: 30vw;">
-                    <h2>{name}</h2>
-                    <p>Address: {address}</p>
-                    <p>Phone: {phone}</p>
+                <div style="border: 1px solid #ccc; padding: 10px; max-width: 400px;">
+                    <h2 style="margin: 0; padding: 0 0 5px 0; font-size: 22px;">{name}</h2>
+                    <p style="margin: 0; font-size 25px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query={encoded_address}" target="_blank">{address}</a></p>
+                    <p style="margin: 0; font-size 25px;"><strong>Phone:</strong> {phone}</p>
                 </div>
             """
 
@@ -55,7 +61,7 @@ def create_map(urgent_care_list, userZip):
             folium.Marker(
                 location=[lat, long],
                 tooltip=name,
-                popup=htmlFrag,
+                popup=folium.Popup(html=htmlFrag, max_width=400),
                 icon=folium.Icon(icon="notes-medical", prefix="fa"),
             ).add_to(m)
 
