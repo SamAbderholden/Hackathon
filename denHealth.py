@@ -39,19 +39,23 @@ response_text = '''
 
 '''
 
-name = re.search(r'<div class="list-results__content-block">\s+(.*?)<br/>', response_text).group(1)
-address = re.search(r'<br/>(.*?)<br/>', response_text).group(1)
-location = re.search(r'<br/>(.*?)\n', response_text).group(1)
+'''response_text = '''
+'''html_block = 
+<div class="list-results__content-block">
+    <div class="list-results__content-block">
+        Adult Urgent Care Center<br/>660 N. Bannock St., Pavilion L, Floor 1<br/>Denver, CO 80204
+    </div>
+    <div class="list-results__content-block">
+'''
 
-#can only find one
-while True:
-    location = location.split("<br/>")[1]
-    print("Name:", name)
-    print("Address:", address)
-    print("Location:", location)
-    
-    if "<br/>" in location:
-        location = location.split("<br/>")[1]
-    else:
-        break
+name = re.findall(r'<div class="list-results__content-block">\s*<div class="list-results__content-block">\s*(.*?)<br/>', data)
+address = re.findall(r'<div class="list-results__content-block">\s*<div class="list-results__content-block">\s*.*?<br/>(.*?)<br/>', data)
+location = re.findall(r'<br/>(.*?)\n', data)
+
+
+for i in range(len(name)):
+    print("Name:", name[i])
+    print("Address:", address[i])
+    location[i] = location[i].split("<br/>")[1]
+    print("Location:", location[i])
 
