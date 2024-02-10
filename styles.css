@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: white;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#appName{
+    color: black;
+    font-size: 7vh;
+    margin-top: 1vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#creds{
+    margin-bottom: 2vh;
+    font-size: min(2vw,2vh);
+    font-weight: bolder;
+}
+
+#compass{
+    height: 5vh;
+    width: 5vh;
+    vertical-align: middle;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
