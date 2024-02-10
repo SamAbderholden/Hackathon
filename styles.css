@@ -98,3 +98,11 @@ footer {
     font-size: min(2vw, 2vh);
     color: #fff;
 }
+
+#logoImage{
+    vertical-align: middle;
+    padding-bottom: 2px;
+    height: 5vh;
+    width: 5vh;
+    margin: -5px -5px -5px -5px;
+}
