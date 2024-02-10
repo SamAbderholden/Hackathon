@@ -49,7 +49,6 @@ def get_data(location):
             "phone": hospital['hospital']['phone']
             } 
         providers_list.append(provider_info)
-    print(providers_list)
     return(providers_list)
         
 
