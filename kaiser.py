@@ -28,10 +28,10 @@ def get_data(zipcode, plan):
 
         return urgent_cares
     except:
-        return []
+        return 0
         
 
 
 
 if __name__  == "__main__":
-    get_data(77005, "Choice PPO")
+    get_data(80401, "Choice PPO")
