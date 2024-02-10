@@ -1,6 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('match-button').addEventListener('click', function() {
-        // Get the PHP file path from the button's data attribute
-        var phpFile = this.getAttribute('data-php-file');
+$(document).ready(function() {
+    $("#match-button").click(function() {
+        $.ajax({
+            type: 'GET',
+            url: '/getMap',
+            success: function(response) {
+                $("body").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
     });
 });
