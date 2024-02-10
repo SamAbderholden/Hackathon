@@ -1,8 +1,6 @@
 import requests
 
-def get_data():
-    plan = 'POS'
-    location = '80401'
+def get_data(plan, location):
     payload = {
         "guid": "65461f76-dffa-4be1-9f64-8049edba3d5b",
         "languageCode": "EN",
