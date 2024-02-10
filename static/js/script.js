@@ -58,3 +58,7 @@ $(document).ready(function() {
     // Initial call to populate the second dropdown based on the default selected provider
     providerSelect.trigger("change");
 });
+
+function iframeLoaded() {
+    document.getElementById('mapIframe').style.display = 'block'; // Make the iframe visible
+}
