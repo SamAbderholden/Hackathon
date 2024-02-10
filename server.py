@@ -15,8 +15,10 @@ def getMap():
     provider = request.args.get('provider')
     if(provider == 'Blue Cross Blue Shield'):
         testResult = get_data(plan, zipcode)
-        create_map(testResult, zipcode)
-    return render_template('map.html')
+        status = create_map(testResult, zipcode)
+        if(status != 0):
+            return render_template('map.html')
+        return render_template('error.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
