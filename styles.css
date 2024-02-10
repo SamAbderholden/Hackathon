@@ -1,42 +1,100 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: white;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+    background-color: #333;
+    color: #fff;
+    overflow: hidden; /* Disable overall page scrolling */
 }
 
-footer{
-    position: absolute;
-    bottom: 0px;
+header {
+    height: 10vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+#appName {
+    font-size: 5vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjusted height */
+}
+
+.container {
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.heading p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.steps .step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#appName{
-    color: black;
-    font-size: 7vh;
-    margin-top: 1vh;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.steps .step label {
+    display: none;
 }
 
-#creds{
-    margin-bottom: 2vh;
-    font-size: min(2vw,2vh);
-    font-weight: bolder;
+.steps .step select,
+.steps .step input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    width: calc(100% - 30px);
 }
 
-#compass{
-    height: 5vh;
-    width: 5vh;
-    vertical-align: middle;
+.steps .step button {
+    padding: 10px 20px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(100% - 30px);
+    margin: 10px;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.steps .step button:hover {
+    background-color: #3399ff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#creds {
+    padding: 1vh;
+    font-size: min(2vw, 2vh);
+    color: #fff;
 }
