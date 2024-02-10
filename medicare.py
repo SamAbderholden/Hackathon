@@ -1,5 +1,4 @@
 import requests
-import re
 
 def get_data(plan, location):
     zip_code = location
