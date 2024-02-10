@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from get_map import create_map
-from bcbs import get_data
+import bcbs
+import kaiser
 
 app = Flask(__name__)
 
@@ -14,11 +15,18 @@ def getMap():
     plan = request.args.get('plan')
     provider = request.args.get('provider')
     if(provider == 'Blue Cross Blue Shield'):
-        testResult = get_data(plan, zipcode)
-        status = create_map(testResult, zipcode)
-        if(status != 0):
+        bcbsdata = bcbs.get_data(plan, zipcode)
+        bcbsstatus = create_map(bcbsdata, zipcode)
+        if(bcbsstatus != 0):
             return render_template('map.html')
         return render_template('error.html')
+    if(provider == 'Kaiser Permanente'):
+        kaiserdata = kaiser.get_data(plan, zipcode)
+        kaiserstatus = create_map(kaiserdata, zipcode)
+        if(kaiserstatus != 0):
+            return render_template('map.html')
+        return render_template('error.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
