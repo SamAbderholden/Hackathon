@@ -12,14 +12,14 @@ def get_data(zipcode, plan):
     urgent_cares = []
     for urgent_care in data["entries"]:
         location = {}
-        location["name"] = urgent_care["name"]
-        location["street"] = urgent_care["address"]["street"]
-        location["city"] = urgent_care["address"]["city"]
-        location["state"] = urgent_care["address"]["state"]
-        location["zip"] = urgent_care["address"]["zip"]
+        location["fullName"] = urgent_care["name"]
+        location["address"] = {"line1": urgent_care["address"]["street"],
+                               "city": urgent_care["address"]["city"],
+                               "state": urgent_care["address"]["state"],
+                               "zip": urgent_care["address"]["zip"]}
         location["phone"] = urgent_care["phones"][0].split("|")[-1]
-        location["lat"] = urgent_care["coordinates"]["lat"]
-        location["lng"] = urgent_care["coordinates"]["lng"]
+        location["latitude"] = urgent_care["coordinates"]["lat"]
+        location["longitude"] = urgent_care["coordinates"]["lng"]
         print(location)
         urgent_cares.append(location)
 
