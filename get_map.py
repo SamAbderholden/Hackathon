@@ -34,27 +34,38 @@ def create_map(urgent_care_list, userZip):
     # Use a default value if urgent_care_list is empty
     urgent_care_list = urgent_care_list or [1]
 
-    for urgent_care in urgent_care_list:
-        # Replace these with data from scraping
-        name = urgent_care['fullName']
-        address = f"{urgent_care['address']['line1']}, {urgent_care['address']['city']}, {urgent_care['address']['state']}, {urgent_care['address']['zip']}"
-        phone = urgent_care["phone"]
+    if urgent_care_list != [1]:
+        for urgent_care in urgent_care_list:
+            # Replace these with data from scraping
+            name = urgent_care['fullName']
+            address = f"{urgent_care['address']['line1']}, {urgent_care['address']['city']}, {urgent_care['address']['state']}, {urgent_care['address']['zip']}"
+            phone = urgent_care["phone"]
 
-        lat = urgent_care['latitude']
-        long = urgent_care['longitude']
+            lat = urgent_care['latitude']
+            long = urgent_care['longitude']
+            htmlFrag = f"""
+                <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; width: 30vw;">
+                    <h2>{name}</h2>
+                    <p>Address: {address}</p>
+                    <p>Phone: {phone}</p>
+                </div>
+            """
 
-        # Add a marker for each urgent care location on the map
-        folium.Marker(
-            location=[lat, long],
-            tooltip=name,
-            popup=f"{address}\n{phone}",
-            icon=folium.Icon(icon="notes-medical", prefix="fa"),
-        ).add_to(m)
+            # Add a marker for each urgent care location on the map
+            folium.Marker(
+                location=[lat, long],
+                tooltip=name,
+                popup=htmlFrag,
+                icon=folium.Icon(icon="notes-medical", prefix="fa"),
+            ).add_to(m)
 
-    old_html_file_path = "./static/coveragemap.html"
-    if os.path.exists(old_html_file_path):
-        os.remove(old_html_file_path)
+            old_html_file_path = "./static/coveragemap.html"
+            if os.path.exists(old_html_file_path):
+                os.remove(old_html_file_path)
 
-    # Save the map as an HTML file
-    m.save(old_html_file_path)
+            # Save the map as an HTML file
+            m.save(old_html_file_path)
+            return 1
+    else:
+        return 0
     # <iframe src="./templates/urgencare_map.html" width="800" height="600"></iframe>
