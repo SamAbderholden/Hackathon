@@ -12,38 +12,35 @@
     <header>
         <p id="appName">Coverage C<img id="logoImage" src="./images/logo.png">mpass</p>
         <p>Get Your Healthcare in the right direction</p>
-
     </header>
     <main>
         <div class="container">
-            <div class="heading">
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <select name="providers" id="provider-select">
-                        <option value="" disabled selected >Select Your provider</option>
-                        <option value="UnitedHealth Group">UnitedHealth Group</option>
-                        <option value="Elevance Health (Anthem)">Elevance Health (Anthem)</option>
-                        <option value="Kaiser Permanente">Kaiser Permanente</option>
-                        <option value="Centene (Ambetter)">Centene (Ambetter)</option>
-                        <option value="Humana">Humana</option>
-                    </select>
-                </div>
-                <div class="step">
-                    <select name="plans" id="plan-select">
-                        <option value="" disabled selected >Select Your Plan</option>
-                        <option value="HMO">HMO</option>
-                        <option value="EPO">EPO</option>
-                        <option value="PPO">PPO</option>
-                        <option value="POS">POS</option>
-                    </select>
-                </div>
-                <div class="step">
-                    <label for="zipcode">Enter Your Zipcode</label>
-                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode">
-                </div>
-                <div class="step">
-                    <button id="match-button">Find your coverage</button>
+            <div class="form-wrapper"> <!-- Wrapper for form elements -->
+                <div class="steps">
+                    <div class="step">
+                        <select name="providers" id="provider-select">
+                            <option value="" disabled selected>Select Your Provider</option>
+                            <option value="Anthem (Elevance Health)">Anthem (Elevance Health)</option>
+                            <option value="Cigna">Cigna</option>
+                            <option value="Denver Health">Denver Health</option>
+                            <option value="Kaiser Permanente">Kaiser Permanente</option>
+                        </select>
+                    </div>
+                    <div class="step">
+                        <select name="plans" id="plan-select">
+                            <option value="" disabled selected>Select Your Plan</option>
+                            <option value="HMO">HMO</option>
+                            <option value="EPO">EPO</option>
+                            <option value="PPO">PPO</option>
+                            <option value="POS">POS</option>
+                        </select>
+                    </div>
+                    <div class="step">
+                        <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode">
+                    </div>
+                    <div class="step">
+                        <button id="match-button">Find your coverage</button>
+                    </div>
                 </div>
             </div>
         </div>
