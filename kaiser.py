@@ -28,7 +28,7 @@ def get_data(zipcode, plan):
 
         return urgent_cares
     except:
-        return []
+        return 0
         
 
 

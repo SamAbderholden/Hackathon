@@ -24,7 +24,7 @@ header {
     background-color: black; /* Or any other color you prefer */
     color: white;
     text-align: center;
-    padding: 30px 0; /* Adjust the padding to increase the height of the title block */
+    padding: 45px 0; /* Adjust the padding to increase the height of the title block */
     box-sizing: border-box;
 }
 
@@ -37,7 +37,7 @@ header {
     height: 50px; /* Adjust height as needed */
     width: 50px; /* Adjust width as needed */
     font-size: 1em;
-    margin: -7px -7px -7px -7px;
+    margin: -7px -7px -3px -7px;
     vertical-align: middle; /* Align the image vertically with the text */
     /* Add other styling as needed */
 }
@@ -52,7 +52,7 @@ main {
     align-items: center; /* Centers children horizontally */
     justify-content: flex-start; /* Aligns children to the start of the main axis */
     height: calc(100% - 140px); /* Adjusted to account for the header */
-    padding-top: 50px; /* Space for the fixed header */
+    padding-top: 110px; /* Space for the fixed header */
     width: 100%; /* Uses the full width */
     overflow: auto; /* Allows for scrolling if content overflows */
     position: relative; /* Context for absolute positioning */
@@ -71,7 +71,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    width: 20vw;
+    width: 18vw;
 }
 
 .steps .step label {

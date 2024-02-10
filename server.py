@@ -21,7 +21,7 @@ def getMap():
             return render_template('map.html')
         return render_template('error.html')
     if(provider == 'Kaiser Permanente'):
-        kaiserdata = kaiser.get_data(plan, zipcode)
+        kaiserdata = kaiser.get_data(zipcode, plan)
         kaiserstatus = create_map(kaiserdata, zipcode)
         if(kaiserstatus != 0):
             return render_template('map.html')
