@@ -1,19 +1,12 @@
 import requests
 import re
-from geopy.geocoders import Nominatim
+import pgeocode
 
 zip_code = '80403'
-geolocator = Nominatim(user_agent="my_app")
-location = geolocator.geocode(zip_code)
-if location:
-    latitude = location.latitude
-    longitude = location.longitude
-    print(f"Latitude: {latitude}, Longitude: {longitude}")
-else:
-    print("Invalid zip code")
+nomi = pgeocode.Nominatim('us')
+a = nomi.query_postal_code(zip_code)
+print(a['latitude'], a['longitude'])
 
-
-zip_code = '80403'
 url = f'https://www.denverhealth.org/locations/search-results?location=&locationtype=urgent+care&services&services=&city=&zip={zip_code}&range=25'
 headers = {
     'Accept': 'application/json, text/plain, */*',
@@ -23,7 +16,7 @@ headers = {
     'Traceparent': '00-5faae1a1f7a5ba7ba93ad2e445e60200-f043969b0ee19d6e-01',
     'Tracestate': '39033@nr=0-1-2144343-464071794-f043969b0ee19d6e----1707594310964',
     'Content-Type': 'application/json',
-    'Content-Length': 216,
+    'Content-Length': '216',
     'Origin': 'https://www.medicare.gov',
     'Referer': 'https://www.medicare.gov/care-compare/?providerType=Hospital',
     'Connection': 'keep-alive',
@@ -36,18 +29,20 @@ headers = {
 
 payload = {
     "type":"Hospital",
-    "filters":{"radiusSearch":{"coordinates":{"lon":-105.347036,"lat":39.904781},
-    "radius":25},"emergencyServices":[true]},
+    "filters":{"radiusSearch":{"coordinates":{"lon":a['longitude'],"lat":a['latitude']},
+    "radius":25},"emergencyServices":[True]},
     "page":1,
     "limit":15,
-    "returnAllResults":false,
+    "returnAllResults":False,
     "sort":["closest","rank","alpha"]}
-r = requests.post('https://provider.bcbs.com/healthsparq/public/service/v4/search', json=payload, headers=headers)
+response = requests.post('https://www.medicare.gov/care-compare/?providerType=Hospital', json=payload, headers=headers)
+
+
 
 
 if response.status_code == 200:
     print("Requested list:")
-    data = (response.text)
+    data = (response.json())
     print(data)
 else:
     print(f"Error: {response.status_code} - {response.text}")
