@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+    background-color: #333; /* Dark background for the whole page */
+    color: #fff; /* White text color */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+#appName {
+    font-size: 5vh; /* Adjusted to match your image */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 40px); /* Subtract the header height */
+}
+
+.container {
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.heading p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.steps ol {
+    list-style: none;
+    padding: 0;
+}
+
+.steps ol li {
+    background-color: #555; /* Darker grey for list items */
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #777; /* Border color to match the design */
+    border-radius: 5px;
+    background-color: transparent; /* Transparent background for buttons */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #555; /* Grey color for button hover state */
+}
+
+footer {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#creds {
+    font-size: min(2vw, 2vh);
+    color: #fff; /* White text color for the footer */
+}
