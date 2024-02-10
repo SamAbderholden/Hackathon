@@ -69,9 +69,9 @@ def create_map(urgent_care_list, userZip):
             if os.path.exists(old_html_file_path):
                 os.remove(old_html_file_path)
 
-            # Save the map as an HTML file
-            m.save(old_html_file_path)
-            return 1
+        # Save the map as an HTML file
+        m.save(old_html_file_path)
+        return 1
     else:
         return 0
     # <iframe src="./templates/urgencare_map.html" width="800" height="600"></iframe>
