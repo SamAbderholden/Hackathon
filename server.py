@@ -11,7 +11,7 @@ def home():
 @app.route("/getMap")
 def getMap():
     testResult = get_data()
-    create_map(testResult, '80301')
+    create_map(testResult, '60048')
     return render_template('map.html')
 
 if __name__ == "__main__":

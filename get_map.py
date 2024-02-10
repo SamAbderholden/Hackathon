@@ -1,8 +1,22 @@
+import csv
+from geopy.exc import GeocoderTimedOut
 from geopy.geocoders import Nominatim
 import folium
-from geopy.exc import GeocoderTimedOut
+import os
+
+def read_zip_coordinates(zip_code):
+    with open('./static/zipToLoc.txt', 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['ZIP'] == zip_code:
+                return float(row['LAT']), float(row['LNG'])
+    return None, None
 
 def get_location(zip_code):
+    lat, lng = read_zip_coordinates(zip_code)
+    if lat is not None and lng is not None:
+        return lat, lng
+
     try:
         geolocator = Nominatim(user_agent="Geopy Library")
         location = geolocator.geocode(zip_code, timeout=10)
@@ -38,6 +52,10 @@ def create_map(urgent_care_list, userZip):
             icon=folium.Icon(icon="notes-medical", prefix="fa"),
         ).add_to(m)
 
+    old_html_file_path = "./static/coveragemap.html"
+    if os.path.exists(old_html_file_path):
+        os.remove(old_html_file_path)
+
     # Save the map as an HTML file
-    m.save("./static/coveragemap.html")
+    m.save(old_html_file_path)
     # <iframe src="./templates/urgencare_map.html" width="800" height="600"></iframe>
