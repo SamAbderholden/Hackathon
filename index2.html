@@ -11,25 +11,29 @@
 <body>
     <header>
         <p id="appName">Coverage Compass</p>
+        <p>Get Your Healthcare in the right direction</p>
+
     </header>
     <main>
         <div class="container">
             <div class="heading">
-                <h1>Coverage Compass</h1>
-                <p>Get Your Healthcare in the right direction</p>
             </div>
             <div class="steps">
                 <div class="step">
-                    <p>Select Your Provider</p>
-                    <button>Select My Provider</button>
+                    <label for="provider-select">Select Your Provider</label>
+                    <select name="providers" id="provider-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="provider1">Provider 1</option>
+                        <option value="provider2">Provider 2</option>
+                        <!-- More options here -->
+                    </select>
                 </div>
                 <div class="step">
-                    <p>Enter Your Zipcode</p>
-                    <button>Enter Zipcode</button>
+                    <label for="zipcode">Enter Your Zipcode</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode">
                 </div>
                 <div class="step">
-                    <p>Get matched with covered healthcare</p>
-                    <button>Continue</button>
+                    <button id="match-button">Get matched with covered healthcare</button>
                 </div>
             </div>
         </div>
