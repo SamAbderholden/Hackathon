@@ -40,24 +40,16 @@ def create_map(urgent_care_list, userZip):
         address = f"{urgent_care['address']['line1']}, {urgent_care['address']['city']}, {urgent_care['address']['state']}, {urgent_care['address']['zip']}"
         phone = urgent_care["phone"]
 
-        # Get location based on urgent care address
-        getLoc = Nominatim(user_agent="Geopy Library").geocode(address)
+        lat = urgent_care['latitude']
+        long = urgent_care['longitude']
 
-        # Check if the location is valid before extracting latitude and longitude
-        if getLoc is not None:
-            lat, long = getLoc.latitude, getLoc.longitude
-
-            # Add a marker for each urgent care location on the map
-            folium.Marker(
-                location=[lat, long],
-                tooltip=name,
-                popup=f"{address}\n{phone}",
-                icon=folium.Icon(icon="notes-medical", prefix="fa"),
-            ).add_to(m)
-        else:
-            # Handle the case when the location is not found
-            print(f"Location not found for address: {address}")
-
+        # Add a marker for each urgent care location on the map
+        folium.Marker(
+            location=[lat, long],
+            tooltip=name,
+            popup=f"{address}\n{phone}",
+            icon=folium.Icon(icon="notes-medical", prefix="fa"),
+        ).add_to(m)
 
     old_html_file_path = "./static/coveragemap.html"
     if os.path.exists(old_html_file_path):

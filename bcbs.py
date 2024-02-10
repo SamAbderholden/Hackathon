@@ -20,7 +20,6 @@ def get_data(plan, location):
 
     data = r.json()
     providers_dict_list = []
-
     for provider in data["providerResults"]:
         provider_info = {
             "fullName": provider["provider"]["fullName"],
@@ -30,6 +29,8 @@ def get_data(plan, location):
                 "state": provider["location"]["address"]["state"],
                 "zip": provider["location"]["address"]["zip"],
             },
+            "latitude": provider["location"]["latitude"],
+            "longitude": provider["location"]["longitude"],
             "phone": provider["location"]["phone"]
         }
         providers_dict_list.append(provider_info)
