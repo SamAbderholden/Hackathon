@@ -42,12 +42,19 @@ def create_map(urgent_care_list, userZip):
 
         lat = urgent_care['latitude']
         long = urgent_care['longitude']
+        htmlFrag = f"""
+            <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; width: 30vw;">
+                <h2>{name}</h2>
+                <p>Address: {address}</p>
+                <p>Phone: {phone}</p>
+            </div>
+        """
 
         # Add a marker for each urgent care location on the map
         folium.Marker(
             location=[lat, long],
             tooltip=name,
-            popup=f"{address}\n{phone}",
+            popup=htmlFrag,
             icon=folium.Icon(icon="notes-medical", prefix="fa"),
         ).add_to(m)
 

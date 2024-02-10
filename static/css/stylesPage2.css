@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body, html {
@@ -60,13 +59,7 @@ header {
     min-height: calc(100% - 140px);
 }
 
-#mapView {
-    flex: 1;
-    background-color: black;
-    position: relative;
-    /* Using min-height to match listView */
-    min-height: calc(100% - 140px);
-}
+
 
 iframe {
     position: absolute;
