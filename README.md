@@ -22,10 +22,10 @@ Explain how to use your project.
 
 ## Authors
 
-* **Sam Abderholden**  [YourName](https://github.com/yourname)
-* **Brenden Maroney**  [YourName](https://github.com/yourname)
-* **Zach Samuels**  [YourName](https://github.com/yourname)
-* **Jack "Siggy" Sigler**  [YourName](https://github.com/yourname)
+* **Sam Abderholden**  [SamAbderholden](https://github.com/yourname)
+* **Brenden Maroney**  [brendanMoro](https://github.com/yourname)
+* **Zach Samuels**  [zachsamuels](https://github.com/yourname)
+* **Jack "Siggy" Sigler**  [sigggy](https://github.com/yourname)
 
 See also the list of [contributors](https://github.com/SamAbderholden/Hackathon) who participated in this project.
 
