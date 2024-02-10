@@ -50,7 +50,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    width: 100%;
+    width: 20vw;
 }
 
 .steps .step label {
@@ -76,6 +76,7 @@ main {
     background-color: #555;
     color: white;
     font-weight: bold;
+    font-size: larger;
     cursor: pointer;
     transition: background-color 0.3s;
     width: calc(100% - 30px);
