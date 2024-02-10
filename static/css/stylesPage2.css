@@ -27,9 +27,10 @@ body, html {
 }
 
 #logoImage {
-    height: 32px; /* Adjust height as needed */
+    height: 50px; /* Adjust height as needed */
+    width: 50px; /* Adjust width as needed */
     font-size: 1em;
-    margin: -5px -5px -5px -5px;
+    margin: -7px -7px -7px -7px;
     vertical-align: middle; /* Align the image vertically with the text */
     /* Add other styling as needed */
 }
