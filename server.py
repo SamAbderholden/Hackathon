@@ -3,6 +3,7 @@ from get_map import create_map
 import bcbs
 import kaiser
 import medicare
+import aetna
 
 app = Flask(__name__)
 
@@ -31,6 +32,12 @@ def getMap():
         medicaredata = medicare.get_data(zipcode)
         medicarestatus = create_map(medicaredata, zipcode)
         if(medicarestatus != 0):
+            return render_template('map.html')
+        return render_template('error.html')
+    if(provider == 'Aetna'):
+        aetnadata = aetna.get_data(zipcode, plan)
+        aetnastatus = create_map(aetnadata, zipcode)
+        if(aetnastatus != 0):
             return render_template('map.html')
         return render_template('error.html')
 

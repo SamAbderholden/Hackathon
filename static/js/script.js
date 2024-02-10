@@ -23,7 +23,8 @@ $(document).ready(function() {
     var planOptions = {
         "Blue Cross Blue Shield": ["HMO", "EPO", "PPO", "POS"],
         "Kaiser Permanente" : ["Choice PPO", "KP Select", "Kaiser Permanente Colorado Option for Small Group", "Child Health Plan Plus", "Commercial", "Kaiser Permanente Colorado Option for Individual & Family", "Medicaid"],
-        "Medicare": ["Medicare"]
+        "Medicare": ["Medicare"],
+        "Aetna": ["Aetna Select", "Open Choice PPO", "Managed Choice POS", "HMO", "QPOS", "Aetna Affordable Health Choices"]
     };
 
     planSelect.prop("disabled", true);
