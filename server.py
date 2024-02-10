@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from get_map import create_map
-from test import test
+from bcbs import get_data
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def home():
 
 @app.route("/getMap")
 def getMap():
-    testResult = test()
+    testResult = get_data()
     create_map(testResult, '80301')
     return render_template('map.html')
 
