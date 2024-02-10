@@ -1,23 +1,28 @@
 # Coverage Compass
 
-Coverage Compass is a web application developed for a hackathon. It's designed to help users find healthcare providers in their area that accept their insurance.
+Coverage Compass is a web application developed during BlasterHacks, a hackathon sponsored by Colorado School of Mines. This application empowers users to swiftly and efficiently search their local area to identify medical providers that accept their insurance, thereby avoiding the inconvenience of insurance denial, especially in urgent situations.
+
+Designed with user experience in mind, Coverage Compass ensures that in times of need, individuals can secure the healthcare services they require without the added stress of navigating insurance complexities.
 
 ## Features
 
-- Interactive map of healthcare providers
-- Filter options based on insurance providers
+- Clean User UI
+- Map of Insurance Covered Healthcare Providers
 
 
 ## Usage
 
-Explain how to use your project.
+1. Select Your Insurance Provider
+2. Select Your Insurance Plan
+3. Enter Your Zipcode
+4. Interact with the Map to find Medical Services 
 
 
 ## Built With
 
-* [Framework1](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Library1](https://maven.apache.org/) - Dependency Management
-* [Software1](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Markup language used for structuring the website
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Style sheet language used for describing the look and formatting of the website
+* [Python](https://www.python.org/) - Programming language used to run the map
 
 
 ## Authors
@@ -32,8 +37,3 @@ Explain how to use your project.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
