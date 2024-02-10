@@ -1,1 +1,35 @@
-https://hcpdirectory.cigna.com/web/public/consumer/directory/facilities?city=Lakewood&zipCode=80401&stateCode=CO&country=US&formattedAddress=Lakewood,%20CO%2080401&latitude=39.73984822&longitude=-105.1969097&searchLocation=Lakewood,%20CO%2080401&county=Jefferson&suppressResponseCode=false&providerGroupCodes=O&specialtyCode=UC&searchTerm=Urgent%20Care%20Facility&medicalProductCode=AMP&dentalProductCode=ADP&pharmacyNetworkCode=0100&pharmacyProductCode=RX0100&behavioralProductCode=MHSR&behavioralNetworkCode=6&categoryId=91121&resultTitle=Urgent%20Care%20Facility&searchCategoryType=place-of-care&searchCategoryCode=HSC05&consumerCode=HDC001&medicalEcnCode=AMP01
+import requests
+
+import requests
+
+url = "https://hcpdirectory.cigna.com/web/public/consumer/directory/search"
+params = {
+    "consumerCode": "HDC001",
+    "country": "US",
+    "specialtyCode": "UC",
+    "searchTerm": "Urgent Care Facility",
+    "stateCode": "CO",
+    "city": "Lakewood",
+    "zipCode": "80401"
+}
+
+response = requests.get(url, params=params)
+
+if response.status_code == 200:
+    try:
+        data = response.json()
+        # Now you can parse the 'data' variable to extract the locations
+    except ValueError:
+        print("Response content is not in JSON format:")
+        print(response.text)
+else:
+    print("Error: Failed to retrieve data from the server. Status code:", response.status_code)
+
+
+
+
+# Now you can parse the 'data' variable to extract the locations
+
+
+
+#https://hcpdirectory.cigna.com/web/public/consumer/directory/search
