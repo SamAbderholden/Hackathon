@@ -10,9 +10,8 @@ def home():
 
 @app.route("/getMap")
 def getMap():
-    # Call the test.py script using subprocess and capture its output
     testResult = test()
-    create_map(testResult, '80401')
+    create_map(testResult, '80301')
     return render_template('map.html')
 
 if __name__ == "__main__":
