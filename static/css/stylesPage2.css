@@ -1,78 +1,50 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Make sure padding doesn't affect width */
 }
 
 body, html {
     height: 100%;
-    font-family: 'Russo One', sans-serif; /* Or 'Arial, sans-serif;' if 'Russo One' isn't being used */
+    font-family: 'Russo One', sans-serif;
     background-color: black;
     color: #fff;
-    overflow: hidden;
+    overflow: hidden; /* You may want to allow overflow if the map needs scrolling */
 }
 
-header {
-    position: fixed;
-    top: 0;
+#titleBlock {
     width: 100%;
-    min-height: 120px; /* Minimum height to accommodate the content */
-    height: auto; /* Allows the header to grow with the content */
-    background-color: black;
+    background-color: black; /* Or any other color you prefer */
     color: white;
     text-align: center;
-    padding: 20px 10px; /* Adjusted padding */
-    z-index: 1000;
+    padding: 20px 0; /* Adjust the padding to increase the height of the title block */
+    box-sizing: border-box;
 }
 
 #appName {
-    font-size: 5vw;
-    margin: 0; /* Ensures no additional spacing from default margins */
-}
-
-#appHeader {
-    font-size: 2vw;
-    margin: 0; /* Ensures no additional spacing from default margins */
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 0;
 }
 
 #logoImage {
-    vertical-align: middle;
-    height: 4.5vw;
-    width: 4.5vw;
-    /* Adjusted margins to ensure consistent spacing */
+    height: 32px; /* Adjust height as needed */
+    font-size: 1em;
     margin: -5px -5px -5px -5px;
-}
-
-#container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 140px; /* Increased to accommodate the content in the header */
-    height: calc(100% - 140px); /* Adjusted to new margin-top value */
-    padding: 0 10px; /* Padding for left and right */
-}
-
-#listView {
-    flex: 0 0 40%;
-    overflow-y: auto;
-    padding: 10px;
-    background-color: grey;
-    /* Using min-height instead of height to make it responsive to content size */
-    min-height: calc(100% - 140px);
-}
-
-#mapView {
-    flex: 1;
-    background-color: black;
-    position: relative;
-    /* Using min-height to match listView */
-    min-height: calc(100% - 140px);
+    vertical-align: middle; /* Align the image vertically with the text */
+    /* Add other styling as needed */
 }
 
 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 100px); /* Adjust the height calculation based on the total height of the titleBlock */
     border: none;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
