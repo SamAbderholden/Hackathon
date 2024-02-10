@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a8e716703f377e473c40c1fc6a3dc82a {
+                #map_ac345b6c879c1fe7504a89695ae6b427 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_a8e716703f377e473c40c1fc6a3dc82a" ></div>
+            <div class="folium-map" id="map_ac345b6c879c1fe7504a89695ae6b427" ></div>
         
 </body>
 <script>
     
     
-            var map_a8e716703f377e473c40c1fc6a3dc82a = L.map(
-                "map_a8e716703f377e473c40c1fc6a3dc82a",
+            var map_ac345b6c879c1fe7504a89695ae6b427 = L.map(
+                "map_ac345b6c879c1fe7504a89695ae6b427",
                 {
                     center: [39.718726, -105.236031],
                     crs: L.CRS.EPSG3857,
@@ -60,45 +60,80 @@
 
         
     
-            var tile_layer_5b44d57e9afbdceb45b66287578236ee = L.tileLayer(
+            var tile_layer_24a4472ba25130758aebe134d07e69ff = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_5b44d57e9afbdceb45b66287578236ee.addTo(map_a8e716703f377e473c40c1fc6a3dc82a);
+            tile_layer_24a4472ba25130758aebe134d07e69ff.addTo(map_ac345b6c879c1fe7504a89695ae6b427);
         
     
-            var marker_120a5794676a56319eee87d8a20781d6 = L.marker(
-                [39.72833, -105.21071],
+            var marker_13acd648b2efecb8d78f5595d77a2125 = L.marker(
+                [39.711681, -105.0891989],
                 {}
-            ).addTo(map_a8e716703f377e473c40c1fc6a3dc82a);
+            ).addTo(map_ac345b6c879c1fe7504a89695ae6b427);
         
     
-            var icon_21593e348b9a2665f7de0af746e7e654 = L.AwesomeMarkers.icon(
+            var icon_c2f36b481d5af7503acfbe3eb86bcda6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_120a5794676a56319eee87d8a20781d6.setIcon(icon_21593e348b9a2665f7de0af746e7e654);
+            marker_13acd648b2efecb8d78f5595d77a2125.setIcon(icon_c2f36b481d5af7503acfbe3eb86bcda6);
         
     
-        var popup_5c1054be5977c434a41e0c77d6e18c32 = L.popup({"maxWidth": 400});
+        var popup_d1a1f19f8718665181ae26a32a32e0aa = L.popup({"maxWidth": 500});
 
         
             
-                var html_63b51d8af652a5ef1c760a22a61ce884 = $(`<div id="html_63b51d8af652a5ef1c760a22a61ce884" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 400px;">                     <h2 style="margin: 0; padding: 0 0 5px 0; font-size: 22px;">Catholic Health Initiatives</h2>                     <p style="margin: 0; font-size 25px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=750%20Warner%20Dr%2C%20Golden%2C%20CO%2C%2080401" target="_blank">750 Warner Dr, Golden, CO, 80401</a></p>                     <p style="margin: 0; font-size 25px;"><strong>Phone:</strong> (303) 925-4340</p>                 </div>             </div>`)[0];
-                popup_5c1054be5977c434a41e0c77d6e18c32.setContent(html_63b51d8af652a5ef1c760a22a61ce884);
+                var html_a3ccbc9d3b2e7ed230f0b644bb3f64f0 = $(`<div id="html_a3ccbc9d3b2e7ed230f0b644bb3f64f0" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Lakewood Medical Offices</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=8383%20W%20Alameda%20Ave%2C%20Lakewood%2C%20CO%2C%2080226" target="_blank">8383 W Alameda Ave, Lakewood, CO, 80226</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 303-338-4545</p>                 </div>             </div>`)[0];
+                popup_d1a1f19f8718665181ae26a32a32e0aa.setContent(html_a3ccbc9d3b2e7ed230f0b644bb3f64f0);
             
         
 
-        marker_120a5794676a56319eee87d8a20781d6.bindPopup(popup_5c1054be5977c434a41e0c77d6e18c32)
+        marker_13acd648b2efecb8d78f5595d77a2125.bindPopup(popup_d1a1f19f8718665181ae26a32a32e0aa)
         ;
 
         
     
     
-            marker_120a5794676a56319eee87d8a20781d6.bindTooltip(
+            marker_13acd648b2efecb8d78f5595d77a2125.bindTooltip(
                 `<div>
-                     Catholic Health Initiatives
+                     Lakewood Medical Offices
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35b0db43aab2fdbd9407cc529848df42 = L.marker(
+                [39.76442, -105.09022],
+                {}
+            ).addTo(map_ac345b6c879c1fe7504a89695ae6b427);
+        
+    
+            var icon_fcaa284635b1475c853fdbebde2ad235 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_35b0db43aab2fdbd9407cc529848df42.setIcon(icon_fcaa284635b1475c853fdbebde2ad235);
+        
+    
+        var popup_ab36459c3c04ad151e83f6c4a72c18bf = L.popup({"maxWidth": 500});
+
+        
+            
+                var html_f21ec5870dcfe8f3d3a0339fd3cf5f06 = $(`<div id="html_f21ec5870dcfe8f3d3a0339fd3cf5f06" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Children's Hospital Colorado - Urgent Care Wheat Ridge (members 21 & younger)</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=3455%20Lutheran%20Parkway%20Ste%20230%2C%20Wheat%20Ridge%2C%2C%20CO%2C%2080033" target="_blank">3455 Lutheran Parkway Ste 230, Wheat Ridge,, CO, 80033</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-777-1370</p>                 </div>             </div>`)[0];
+                popup_ab36459c3c04ad151e83f6c4a72c18bf.setContent(html_f21ec5870dcfe8f3d3a0339fd3cf5f06);
+            
+        
+
+        marker_35b0db43aab2fdbd9407cc529848df42.bindPopup(popup_ab36459c3c04ad151e83f6c4a72c18bf)
+        ;
+
+        
+    
+    
+            marker_35b0db43aab2fdbd9407cc529848df42.bindTooltip(
+                `<div>
+                     Children's Hospital Colorado - Urgent Care Wheat Ridge (members 21 & younger)
                  </div>`,
                 {"sticky": true}
             );

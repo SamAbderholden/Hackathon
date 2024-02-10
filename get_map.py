@@ -50,10 +50,10 @@ def create_map(urgent_care_list, userZip):
             
             # Modify the address line to include a clickable Google Maps link
             htmlFrag = f"""
-                <div style="border: 1px solid #ccc; padding: 10px; max-width: 400px;">
-                    <h2 style="margin: 0; padding: 0 0 5px 0; font-size: 22px;">{name}</h2>
-                    <p style="margin: 0; font-size 25px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query={encoded_address}" target="_blank">{address}</a></p>
-                    <p style="margin: 0; font-size 25px;"><strong>Phone:</strong> {phone}</p>
+                <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">
+                    <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">{name}</h2>
+                    <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query={encoded_address}" target="_blank">{address}</a></p>
+                    <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> {phone}</p>
                 </div>
             """
 
@@ -61,7 +61,7 @@ def create_map(urgent_care_list, userZip):
             folium.Marker(
                 location=[lat, long],
                 tooltip=name,
-                popup=folium.Popup(html=htmlFrag, max_width=400),
+                popup=folium.Popup(html=htmlFrag, max_width=500),
                 icon=folium.Icon(icon="notes-medical", prefix="fa"),
             ).add_to(m)
 
