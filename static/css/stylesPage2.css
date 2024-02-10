@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Russo One', sans-serif; /* Or 'Arial, sans-serif;' if 'Russo One' isn't being used */
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px; /* Adjusted to fixed height */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Styles for the application name */
+#appName {
+    font-size: 5vw;
+}
+
+/* Styles for the application subheader */
+#appHeader {
+    font-size: 2vw; /* This value can be adjusted as needed */
+}
+
+/* Styles for the logo image */
+#logoImage {
+    vertical-align: middle;
+    padding-bottom: 2px;
+    height: 6vh;
+    width: 6vh;
+    margin: -5px -5px -5px -5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+    height: calc(100% - 120px);
+}
+
+#listView {
+    flex: 0 0 40%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: grey;
+    height: 100%;
+}
+
+#mapView {
+    flex: 1;
+    background-color: black;
+    position: relative;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

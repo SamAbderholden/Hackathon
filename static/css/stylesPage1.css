@@ -8,9 +8,9 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Russo One', sans-serif;
-    background-color: black;
-    color: #fff;
     overflow: hidden; /* Disable overall page scrolling */
+    background-color: black; /* Fallback color */
+    color: #fff;
 }
 
 header {
@@ -91,24 +91,13 @@ footer {
 
 
 
-.form-wrapper {
-    background-color: black; /* Or any other color you prefer */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto; /* Center the box */
-    width: fit-content; /* Auto width based on content */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-}
-
 .steps {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.step {
     margin-bottom: 10px; /* Space between each step */
 }
+
 
 #provider-select, #plan-select, #zipcode {
     width: 100%; /* Full width */
@@ -118,6 +107,7 @@ footer {
     border-radius: 5px;
     background-color: black;
     color: white;
+    text-align: left;
 }
 
 #match-button {
@@ -150,3 +140,4 @@ input::placeholder {
     color: white;
     text-align: center;
 }
+
