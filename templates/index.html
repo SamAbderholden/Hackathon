@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coverage Compass</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
-    <script src="script.js"></script>
+    <script src="../static/js/"></script>
 </head>
 <body>
     <header>
-        <p id="appName">Coverage C<img id="logoImage" src="./images/logo.png">mpass</p>
-        <p>Get Your Healthcare in the right direction</p>
+        <p id="appName">Coverage C<img id="logoImage" src="../static/logo.png">mpass</p>
+        <p>Get Pointed to the Right Healthcare</p>
 
     </header>
-    <main>
+    <main id="main">
         <div class="container">
             <div class="heading">
             </div>
@@ -22,11 +22,7 @@
                 <div class="step">
                     <select name="providers" id="provider-select">
                         <option value="" disabled selected hidden>Select Your provider</option>
-                        <option value="UnitedHealth Group">UnitedHealth Group</option>
-                        <option value="Elevance Health (Anthem)">Elevance Health (Anthem)</option>
-                        <option value="Kaiser Permanente">Kaiser Permanente</option>
-                        <option value="Centene (Ambetter)">Centene (Ambetter)</option>
-                        <option value="Humana">Humana</option>
+                        <option value="UnitedHealth Group">Blue Cross Blue Shield</option>
                     </select>
                 </div>
                 <div class="step">
@@ -43,7 +39,7 @@
                     <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode">
                 </div>
                 <div class="step">
-                    <button id="match-button">Find your coverage</button>
+                    <button id="match-button" data-php-file="getMap.php">Find your coverage</button>
                 </div>
             </div>
         </div>
