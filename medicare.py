@@ -1,7 +1,16 @@
 import requests
+import csv
 
-def get_data(plan, location):
-    zip_code = location
+def read_zip_coordinates(zip_code):
+    with open('./static/zipToLoc.txt', 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['ZIP'] == zip_code:
+                return float(row['LAT']), float(row['LNG'])
+    return None, None
+
+def get_data(location):
+    lat, long = read_zip_coordinates(location)
     url = f'https://www.medicare.gov/api/care-compare/provider/'
     headers = {
         'Accept':'application/json, text/plain, */*',
@@ -16,7 +25,7 @@ def get_data(plan, location):
         }
     payload = {
         "type":"Hospital",
-        "filters":{"radiusSearch":{"coordinates":{"lon":-105.347036,"lat":39.904781},
+        "filters":{"radiusSearch":{"coordinates":{"lon":long,"lat":lat},
         "radius":25},
         "emergencyServices":[True]},
         "page":1,"limit":50,"returnAllResults":False,
@@ -24,7 +33,7 @@ def get_data(plan, location):
         }
     response = requests.post(url, json=payload, headers=headers)
     data = response.json()
-        
+    
     providers_list = []
     for hospital in data['results']:
         provider_info = {
@@ -40,10 +49,9 @@ def get_data(plan, location):
             "phone": hospital['hospital']['phone']
             } 
         providers_list.append(provider_info)
-
     return(providers_list)
         
 
 
 if __name__  == "__main__":
-    get_data("Choice PPO", "80403")
+    get_data("60048")

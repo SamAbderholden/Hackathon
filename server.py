@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from get_map import create_map
 import bcbs
 import kaiser
+import medicare
 
 app = Flask(__name__)
 
@@ -24,6 +25,12 @@ def getMap():
         kaiserdata = kaiser.get_data(zipcode, plan)
         kaiserstatus = create_map(kaiserdata, zipcode)
         if(kaiserstatus != 0):
+            return render_template('map.html')
+        return render_template('error.html')
+    if(provider == 'Medicare'):
+        medicaredata = medicare.get_data(zipcode)
+        medicarestatus = create_map(medicaredata, zipcode)
+        if(medicarestatus != 0):
             return render_template('map.html')
         return render_template('error.html')
 

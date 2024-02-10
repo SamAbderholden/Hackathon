@@ -34,5 +34,6 @@ def get_data(plan, location):
             "phone": provider["location"]["phone"]
         }
         providers_dict_list.append(provider_info)
+    print(providers_dict_list)
     return providers_dict_list
 
