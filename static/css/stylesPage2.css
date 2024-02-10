@@ -17,18 +17,34 @@ body, html {
     background-color: black; /* Or any other color you prefer */
     color: white;
     text-align: center;
-    padding: 1em 0; /* Adjust the padding to increase the height of the title block */
-    font-size: 2em; /* Adjust font size as needed */
+    padding: 20px 0; /* Adjust the padding to increase the height of the title block */
+    box-sizing: border-box;
+}
+
+#appName {
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 0;
+}
+
+#logoImage {
+    height: 32px; /* Adjust height as needed */
+    font-size: 1em;
+    margin: -5px -5px -5px -5px;
+    vertical-align: middle; /* Align the image vertically with the text */
+    /* Add other styling as needed */
 }
 
 iframe {
     width: 100%;
-    height: calc(100% - 2em); /* Adjust the height calculation if you change the padding of the title block */
+    height: calc(100% - 100px); /* Adjust the height calculation based on the total height of the titleBlock */
     border: none;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
