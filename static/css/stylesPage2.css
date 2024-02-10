@@ -1,13 +1,34 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Make sure padding doesn't affect width */
 }
 
 body, html {
     height: 100%;
-    font-family: 'Russo One', sans-serif; /* Or 'Arial, sans-serif;' if 'Russo One' isn't being used */
+    font-family: 'Russo One', sans-serif;
     background-color: black;
     color: #fff;
-    overflow: hidden;
+    overflow: hidden; /* You may want to allow overflow if the map needs scrolling */
+}
+
+#titleBlock {
+    width: 100%;
+    background-color: black; /* Or any other color you prefer */
+    color: white;
+    text-align: center;
+    padding: 1em 0; /* Adjust the padding to increase the height of the title block */
+    font-size: 2em; /* Adjust font size as needed */
+}
+
+iframe {
+    width: 100%;
+    height: calc(100% - 2em); /* Adjust the height calculation if you change the padding of the title block */
+    border: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
