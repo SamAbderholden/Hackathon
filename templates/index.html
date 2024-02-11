@@ -20,21 +20,29 @@
             </div>
             <div class="steps">
                 <div class="step">
-                    <select name="providers" id="provider-select">
+                    <select name="providers" id="provider-select" required>
                         <option value="" disabled selected hidden>Select Your Provider</option>
                         <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
                         <option value="Kaiser Permanente">Kaiser Permanente</option>
                         <option value="Medicare">Medicare</option>
                         <option value="Aetna">Aetna</option>
+                        <option value="Cigna">Cigna</option>
+                        <option value="Medicaid">Medicaid</option>
+                        <option value="United Healthcare">United Healthcare</option>
+                        <option value="Humana">Humana</option>
                     </select>
                 </div>
                 <div class="step">
-                    <select name="plans" id="plan-select">
+                    <select name="plans" id="plan-select" required>
                     </select>
                 </div>
                 <div class="step">
                     <label for="zipcode">Enter Your Zipcode</label>
+<<<<<<< HEAD
                     <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode" maxlength="5" pattern="\d{5}">       
+=======
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode" minlength="5" maxlength="5" pattern = /d+/ required>
+>>>>>>> f0eca62ccc9e42ae697f310d573dbdb3079357b1
                 </div>
                 <div class="step">
                     <button id="match-button">Find your coverage</button>

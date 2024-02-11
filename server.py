@@ -4,6 +4,7 @@ import bcbs
 import kaiser
 import medicare
 import aetna
+import cigna 
 
 app = Flask(__name__)
 
@@ -40,6 +41,24 @@ def getMap():
         if(aetnastatus != 0):
             return render_template('map.html')
         return render_template('error.html')
+    if(provider == 'Cigna'):
+        cignadata = cigna.get_data(zipcode, plan)
+        cignastatus = create_map(cignadata, zipcode)
+        if(cignastatus != 0):
+            return render_template('map.html')
+        return render_template('error.html')
+    if(provider == 'Medicaid'):
+        #TODO
+        pass
+    if(provider == 'United Healthcare'):
+        #TODO
+        pass
+    if provider == 'Humana':
+        #TODO
+        pass
+    return render_template('index.html')
+
+    
 
 
 if __name__ == "__main__":

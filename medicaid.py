@@ -13,6 +13,10 @@ def get_data(location):
     lat, long = read_zip_coordinates(location)
     url = f'https://peak.my.site.com/peak/apexremote'
     headers = {
+        "Akamai-Grn": "0.478d2117.1707612515.20c4b489",
+        "Cache-Control":"no-cache,must-revalidate,max-age=0,no-store,private",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json;charset=UTF-8",
         'Accept':'application/json, text/plain, */*',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -24,12 +28,23 @@ def get_data(location):
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-origin',
-        'Set-Cookie':"ak_bmsc=127B035B1DA1A234EF1C1D48DEC3AFA1~000000000000000000000000000000~YAAQR40hF52gOoWNAQAA+dZ+lRa4TqDYB/G8dQhfDfpwZ5rRBGrbQuYuhXXM9JAMsnhjkWEacQFi9/f2Gs0MuD0cVhuK1+so0pmKjCItk/18loL5IWtb5eWxBgzFs23+YQpfzAPwvf6NhvRS2v3QceVve/MNWF/jU5LfcEk0I3/yb6Oly5F8p0oTFrkBcFV/YUq9iUILy3a6pfrjR9XozA6musP6zkJ1avPoMwoCjj5cZGW01I+td5h8ax1JOwAIMW22U9mRIwCrVD8SxBWD/66EZtmIpOyfhPnh6khNyQaPRZkMclkfwjbKmINZSSlCSkw4Y7NJ3XvsL8koEQlvJaHAwdtG6OXUyP8+QCFlZBOoJcQTB/B2De1NBzeyLnffTVhUq9HP8DRr; Domain=.my.site.com; Path=/; Expires=Sun, 11 Feb 2024 02:08:52 GMT; Max-Age=7198; HttpOnly",
+        'Set-Cookie':"ak_bmsc=102F396F2D5A2C8BBF5D2DCE6655247F~000000000000000000000000000000~YAAQR40hFyFpPIWNAQAAgzOjlRYEppHQB62fEVJAftKDJkP38UgVoNayrDknPZTlOeNr3V9VaK+/Gqk8unv1lyjMk5Bti1kJtDfSQ/3s9p/ztqmXig9tceDRX8Td4YQIVEorxVAIVyovysLvk7Of9aje1iVeydV/b+LuTwximvi0fCdORnMyBEGKZy1W3ABMhVtt/cKpjqj9QqTW5yLO5DVEyicHyx89cugLDALIEqvGDffwWG4Q3epPEuW1FY2DcYsdXpjz1CBl5q+fkaO3908R/zJmf+mCmkNlxPxGKitjbyezG0H+wziQ6uxtH2ueyctnwmNTFH+XvgQ6LvEfFDplqCZbP7pTqbiWg6TxSG8fHkZipGVgrIOF+A26uTM3VJzrqbE2oNIH; Domain=.my.site.com; Path=/; Expires=Sun, 11 Feb 2024 02:48:35 GMT; Max-Age=7198; HttpOnly",
         'Referrer-Policy':'origin-when-cross-origin',
-         "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/115.0",
-         "X-Requested-With":"XMLHttpRequest",
-        "X-User-Agent":"Visualforce-Remoting"
-
+        
+        "X-Requested-With":"XMLHttpRequest",
+        "X-User-Agent":"Visualforce-Remoting",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Vary":"Accept-Encoding",
+        "X-Content-Type-Options":"nosniff",
+        "X-Origin-Cache-Control":"no-cache,must-revalidate,max-age=0,no-store,private",
+        "Sec-Ch-Ua": '"Google Chrome";v="119", "Chromium";v="119", "Not?A_Brand";v="24"',
+        "Sec-Ch-Ua-Mobile": "?0",    
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/",
+        "X-Requested-With": "XMLHttpRequest",
+        "X-User-Agent": "Visualforce-Remoting"
         }
     payload = {
         "action":"ProviderSearchController",
@@ -81,3 +96,5 @@ def get_data(location):
 
 if __name__  == "__main__":
     get_data("60048")
+
+

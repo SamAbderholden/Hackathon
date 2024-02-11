@@ -24,7 +24,11 @@ $(document).ready(function() {
         "Blue Cross Blue Shield": ["HMO", "EPO", "PPO", "POS"],
         "Kaiser Permanente" : ["Choice PPO", "KP Select", "Kaiser Permanente Colorado Option for Small Group", "Child Health Plan Plus", "Commercial", "Kaiser Permanente Colorado Option for Individual & Family", "Medicaid"],
         "Medicare": ["Medicare"],
-        "Aetna": ["Aetna Select", "Open Choice PPO", "Managed Choice POS", "HMO", "QPOS", "Aetna Affordable Health Choices"]
+        "Aetna": ["Aetna Select", "Open Choice PPO", "Managed Choice POS", "HMO", "QPOS", "Aetna Affordable Health Choices"],
+        "Humana": ["HMO", "EPO", "PPO", "POS"],
+        "Medicaid": ["HMO", "EPO", "PPO", "POS"],
+        "United Healthcare": ["HMO", "EPO", "PPO", "POS"],
+        "Cigna": ["HMO", "EPO", "PPO", "POS"],
     };
 
     planSelect.prop("disabled", true);
