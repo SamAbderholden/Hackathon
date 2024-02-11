@@ -44,6 +44,30 @@ params = params = {
 # Send the GET request with headers and params
 response = requests.get(url, headers=headers, params=params)
 print(response.text)
+data = response.json()
+urgent_cares = data['searchResult']['providerGroups'][0]['providers']
+print(urgent_cares)
+output = []
+for urgent_care in urgent_cares:
+    try:
+        location = {}
+        location["fullName"] = urgent_care["name"]
+        location["address"] = {"line1": urgent_care['locations'][0]["streetName"],
+                                "city": urgent_care['locations'][0]["city"],
+                                "state": urgent_care['locations'][0]["stateCode"],
+                                "zip": urgent_care['locations'][0]["zipCode"]
+        }
+        location["latitude"] = urgent_care['locations'][0]["latitude"]
+        location["longitude"] = urgent_care['locations'][0]["longitude"]
+        location["phone"] = urgent_care['locations'][0]["phones"][0]
+        
+        
+        if location not in output:
+            print(location)
+            output.append(location)
+    except Exception as e:
+        print(e)
+'''
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
         # Process the response data here
@@ -52,3 +76,4 @@ if response.status_code == 200:
         print(data)
 else:
     print("Request failed with status code:", response.status_code)
+'''
