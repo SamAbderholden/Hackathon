@@ -51,7 +51,6 @@ def get_data(zipcode, plan):
             location["longitude"] = entry["providerLocations"]["address"]["longitude"]
             urgent_cares.append(location)
 
-        print(urgent_cares)
         return urgent_cares
     except:
         return 0
