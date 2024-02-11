@@ -1,35 +1,36 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; /* Make sure padding doesn't affect width */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This ensures spacing around elements */
+    padding: 20px;
 }
 
-body, html {
-    height: 100%;
-    font-family: 'Russo One', sans-serif;
-    background-color: black;
-    color: #fff;
-    overflow: hidden; /* You may want to allow overflow if the map needs scrolling */
+#backButton, .spacer {
+    flex: 0 0 auto; /* Do not grow or shrink */
+    width: 100px; /* Adjust this width to match the back button's width for balance */
+}
+
+.spacer {
+    /* The spacer is invisible and just takes up space */
+    visibility: hidden;
 }
 
 #backButton {
-    position: fixed; /* Position the button fixed */
-    top: 30px; /* Move it a little bit lower */
-    left: 20px; /* Move it a little bit to the right */
-    width: 60px; /* Increase the width */
-    height: 30px; /* Increase the height */
-    background-color: transparent; /* Make the button white */
-    color: white; /* Make the text color black so it's visible on the white background */
-    text-decoration: none; /* Remove the underline */
-    font-size: 30px;
+    /* Styles for the back button */
+    background-color: black; /* Visible color */
+    color: white;
+    text-decoration: none;
+    padding: 25px 25px; /* Adjust padding */
+    font-size: 25px; /* Adjust font size */
 }
+
 
 #titleBlock {
     width: 100%;
     background-color: black; /* Or any other color you prefer */
     color: white;
     text-align: center;
-    padding: 20px 0; /* Adjust the padding to increase the height of the title block */
+    padding: 28px 0; /* Adjust the padding to increase the height of the title block */
     box-sizing: border-box;
 }
 
