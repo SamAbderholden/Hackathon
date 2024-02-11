@@ -62,7 +62,7 @@ def create_map(urgent_care_list, userZip):
                 location=[lat, long],
                 tooltip=name,
                 popup=folium.Popup(html=htmlFrag, max_width=500),
-                icon=folium.Icon(icon="notes-medical", prefix="fa"),
+                icon=folium.Icon(icon="hospital", prefix="fa"),
             ).add_to(m)
 
             old_html_file_path = "./static/coveragemap.html"
