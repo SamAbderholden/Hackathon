@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1917816993bd1ff70464b123f648d986 {
+                #map_30599ddc8c8a86d19a0e0004e44833ee {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_1917816993bd1ff70464b123f648d986" ></div>
+            <div class="folium-map" id="map_30599ddc8c8a86d19a0e0004e44833ee" ></div>
         
 </body>
 <script>
     
     
-            var map_1917816993bd1ff70464b123f648d986 = L.map(
-                "map_1917816993bd1ff70464b123f648d986",
+            var map_30599ddc8c8a86d19a0e0004e44833ee = L.map(
+                "map_30599ddc8c8a86d19a0e0004e44833ee",
                 {
-                    center: [39.718726, -105.236031],
+                    center: [55.7246709, 37.58500955435662],
                     crs: L.CRS.EPSG3857,
                     zoom: 12,
                     zoomControl: true,
@@ -60,430 +60,360 @@
 
         
     
-            var tile_layer_5ac69da947475c3c4d235b8a64bbed16 = L.tileLayer(
+            var tile_layer_b29217a036c0a22567204c5db494b523 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_5ac69da947475c3c4d235b8a64bbed16.addTo(map_1917816993bd1ff70464b123f648d986);
+            tile_layer_b29217a036c0a22567204c5db494b523.addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var marker_bec873387a974b5be18a9ff6d698948f = L.marker(
-                [39.711681, -105.0891989],
+            var marker_3efff58f381ee1af53d567f941d4fdfd = L.marker(
+                [45.54836, -122.6667],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_eaa7fda685c2754a725ab78f33b31fb2 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_57bd90c73fe25eeb8d73d8c5c0da4a8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_bec873387a974b5be18a9ff6d698948f.setIcon(icon_eaa7fda685c2754a725ab78f33b31fb2);
+            marker_3efff58f381ee1af53d567f941d4fdfd.setIcon(icon_57bd90c73fe25eeb8d73d8c5c0da4a8a);
         
     
-        var popup_56ca65b9a09ab3cf1cd0a76f4f9fd58a = L.popup({"maxWidth": 500});
+        var popup_d905f01fdd472bfbbc61b09f4b0296af = L.popup({"maxWidth": 500});
 
         
             
-                var html_f799c0f2385a9a23da506ed6b8646760 = $(`<div id="html_f799c0f2385a9a23da506ed6b8646760" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Lakewood Medical Offices</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=8383%20W%20Alameda%20Ave%2C%20Lakewood%2C%20CO%2C%2080226" target="_blank">8383 W Alameda Ave, Lakewood, CO, 80226</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 303-338-4545</p>                 </div>             </div>`)[0];
-                popup_56ca65b9a09ab3cf1cd0a76f4f9fd58a.setContent(html_f799c0f2385a9a23da506ed6b8646760);
+                var html_7befc61c5a6b343681e9b7e870601885 = $(`<div id="html_7befc61c5a6b343681e9b7e870601885" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Legacy Gohealth Urgent Care Williams</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=3505%20N%20Williams%20Ave%2C%20Portland%2C%20OR%2C%2097227" target="_blank">3505 N Williams Ave, Portland, OR, 97227</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 396-4950</p>                 </div>             </div>`)[0];
+                popup_d905f01fdd472bfbbc61b09f4b0296af.setContent(html_7befc61c5a6b343681e9b7e870601885);
             
         
 
-        marker_bec873387a974b5be18a9ff6d698948f.bindPopup(popup_56ca65b9a09ab3cf1cd0a76f4f9fd58a)
+        marker_3efff58f381ee1af53d567f941d4fdfd.bindPopup(popup_d905f01fdd472bfbbc61b09f4b0296af)
         ;
 
         
     
     
-            marker_bec873387a974b5be18a9ff6d698948f.bindTooltip(
+            marker_3efff58f381ee1af53d567f941d4fdfd.bindTooltip(
                 `<div>
-                     Lakewood Medical Offices
+                     Legacy Gohealth Urgent Care Williams
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_c991c60bb1c36569568f4cda0f1b0d1c = L.marker(
-                [39.76442, -105.09022],
+            var marker_4d9355a9cc743a248e36d2ab0c87efec = L.marker(
+                [45.53596, -122.62027],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_1f885887670263134b0c720ad6c46cf3 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_56c69972b35c1d997c416b25846a249a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_c991c60bb1c36569568f4cda0f1b0d1c.setIcon(icon_1f885887670263134b0c720ad6c46cf3);
+            marker_4d9355a9cc743a248e36d2ab0c87efec.setIcon(icon_56c69972b35c1d997c416b25846a249a);
         
     
-        var popup_68b068f8c48cbf2fcdfe5a9720da4c70 = L.popup({"maxWidth": 500});
+        var popup_e17058b686dd52b915b5841bdc17e696 = L.popup({"maxWidth": 500});
 
         
             
-                var html_34f3a88a8d0849efa0398809ef6fec84 = $(`<div id="html_34f3a88a8d0849efa0398809ef6fec84" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Children's Hospital Colorado - Urgent Care Wheat Ridge (members 21 & younger)</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=3455%20Lutheran%20Parkway%20Ste%20230%2C%20Wheat%20Ridge%2C%2C%20CO%2C%2080033" target="_blank">3455 Lutheran Parkway Ste 230, Wheat Ridge,, CO, 80033</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-777-1370</p>                 </div>             </div>`)[0];
-                popup_68b068f8c48cbf2fcdfe5a9720da4c70.setContent(html_34f3a88a8d0849efa0398809ef6fec84);
+                var html_48b58380a94cf1424af409291e9e1dbf = $(`<div id="html_48b58380a94cf1424af409291e9e1dbf" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Portland Urgent Care</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=4160%20NE%20Sandy%20Blvd%2C%20Portland%2C%20OR%2C%2097212" target="_blank">4160 NE Sandy Blvd, Portland, OR, 97212</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 249-9000</p>                 </div>             </div>`)[0];
+                popup_e17058b686dd52b915b5841bdc17e696.setContent(html_48b58380a94cf1424af409291e9e1dbf);
             
         
 
-        marker_c991c60bb1c36569568f4cda0f1b0d1c.bindPopup(popup_68b068f8c48cbf2fcdfe5a9720da4c70)
+        marker_4d9355a9cc743a248e36d2ab0c87efec.bindPopup(popup_e17058b686dd52b915b5841bdc17e696)
         ;
 
         
     
     
-            marker_c991c60bb1c36569568f4cda0f1b0d1c.bindTooltip(
+            marker_4d9355a9cc743a248e36d2ab0c87efec.bindTooltip(
                 `<div>
-                     Children's Hospital Colorado - Urgent Care Wheat Ridge (members 21 & younger)
+                     Portland Urgent Care
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_50a51f528573d76e83718be1081d7110 = L.marker(
-                [39.74504, -104.968421],
+            var marker_72c6962cefc244498883802703b2e954 = L.marker(
+                [45.54756, -122.5909],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_f8e31dcaeb12fe8dd68b0bbcf48dfbbf = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_5b44d5e9329c0b376ac037aceb0cd673 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_50a51f528573d76e83718be1081d7110.setIcon(icon_f8e31dcaeb12fe8dd68b0bbcf48dfbbf);
+            marker_72c6962cefc244498883802703b2e954.setIcon(icon_5b44d5e9329c0b376ac037aceb0cd673);
         
     
-        var popup_c54b07d6454789ad4fe61659998ce876 = L.popup({"maxWidth": 500});
+        var popup_44de90c964485becab088f449cf1df4e = L.popup({"maxWidth": 500});
 
         
             
-                var html_237bb0b22b45629031b9ef179125473a = $(`<div id="html_237bb0b22b45629031b9ef179125473a" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Children's Colorado Urgent Care at Uptown, Denver</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=1830%20Franklin%20St%20Ste%20100%2C%20Denver%2C%20CO%2C%2080218" target="_blank">1830 Franklin St Ste 100, Denver, CO, 80218</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-777-1360</p>                 </div>             </div>`)[0];
-                popup_c54b07d6454789ad4fe61659998ce876.setContent(html_237bb0b22b45629031b9ef179125473a);
+                var html_1073b9f6c7b64a487812a682bb96005b = $(`<div id="html_1073b9f6c7b64a487812a682bb96005b" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Uptown Providers PC</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=7033%20NE%20Sandy%20Blvd%2C%20Portland%2C%20OR%2C%2097213" target="_blank">7033 NE Sandy Blvd, Portland, OR, 97213</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 305-6262</p>                 </div>             </div>`)[0];
+                popup_44de90c964485becab088f449cf1df4e.setContent(html_1073b9f6c7b64a487812a682bb96005b);
             
         
 
-        marker_50a51f528573d76e83718be1081d7110.bindPopup(popup_c54b07d6454789ad4fe61659998ce876)
+        marker_72c6962cefc244498883802703b2e954.bindPopup(popup_44de90c964485becab088f449cf1df4e)
         ;
 
         
     
     
-            marker_50a51f528573d76e83718be1081d7110.bindTooltip(
+            marker_72c6962cefc244498883802703b2e954.bindTooltip(
                 `<div>
-                     Children's Colorado Urgent Care at Uptown, Denver
+                     Uptown Providers PC
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_2a5563a33cfbb6c608a3c85288697057 = L.marker(
-                [39.555708, -105.010119],
+            var marker_768a306735b24c0260986f3ccb61a508 = L.marker(
+                [45.45567, -122.57911],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_e7c2fddd5d7d9c74b07b1f90a9540800 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_383d255e15bcd2300a5b3dc07e7cab82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_2a5563a33cfbb6c608a3c85288697057.setIcon(icon_e7c2fddd5d7d9c74b07b1f90a9540800);
+            marker_768a306735b24c0260986f3ccb61a508.setIcon(icon_383d255e15bcd2300a5b3dc07e7cab82);
         
     
-        var popup_3e29a269eaacbe4471136d595a44a1a1 = L.popup({"maxWidth": 500});
+        var popup_2a51a9f40e46ae2ffcc99abbc636cd81 = L.popup({"maxWidth": 500});
 
         
             
-                var html_b04f101e1d7791567dca3b7fc8f77758 = $(`<div id="html_b04f101e1d7791567dca3b7fc8f77758" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Children's Hospital Colorado South Campus, Highlands Ranch (members 21 & younger)</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=1811%20Plaza%20Drive%2C%20Highlands%20Ranch%2C%20CO%2C%2080129" target="_blank">1811 Plaza Drive, Highlands Ranch, CO, 80129</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-478-1234</p>                 </div>             </div>`)[0];
-                popup_3e29a269eaacbe4471136d595a44a1a1.setContent(html_b04f101e1d7791567dca3b7fc8f77758);
+                var html_79631c69ebeb0805b55c3d216cfc1ae6 = $(`<div id="html_79631c69ebeb0805b55c3d216cfc1ae6" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Legacy Gohealth Urgent Care  Johnson Creek</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=9361%20SE%2082nd%20Ave%2C%20Happy%20Valley%2C%20OR%2C%2097086" target="_blank">9361 SE 82nd Ave, Happy Valley, OR, 97086</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 457-4301</p>                 </div>             </div>`)[0];
+                popup_2a51a9f40e46ae2ffcc99abbc636cd81.setContent(html_79631c69ebeb0805b55c3d216cfc1ae6);
             
         
 
-        marker_2a5563a33cfbb6c608a3c85288697057.bindPopup(popup_3e29a269eaacbe4471136d595a44a1a1)
+        marker_768a306735b24c0260986f3ccb61a508.bindPopup(popup_2a51a9f40e46ae2ffcc99abbc636cd81)
         ;
 
         
     
     
-            marker_2a5563a33cfbb6c608a3c85288697057.bindTooltip(
+            marker_768a306735b24c0260986f3ccb61a508.bindTooltip(
                 `<div>
-                     Children's Hospital Colorado South Campus, Highlands Ranch (members 21 & younger)
+                     Legacy Gohealth Urgent Care  Johnson Creek
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_bed02c4137cc50535d0b52e773b7a8c4 = L.marker(
-                [39.7038906, -104.8172705],
+            var marker_d753df9c40a21bf03043967ed9100fbf = L.marker(
+                [45.49915, -122.80724],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_079360b75b2e6836010cf0803ef5b152 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_12d6dc07fa3231da859b3f94ed006d5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_bed02c4137cc50535d0b52e773b7a8c4.setIcon(icon_079360b75b2e6836010cf0803ef5b152);
+            marker_d753df9c40a21bf03043967ed9100fbf.setIcon(icon_12d6dc07fa3231da859b3f94ed006d5a);
         
     
-        var popup_b84de0a4c7c34e724d2d715ff5cceb01 = L.popup({"maxWidth": 500});
+        var popup_dbe1856d127a365d5f98df07db696c55 = L.popup({"maxWidth": 500});
 
         
             
-                var html_021170c98b3010d516473fbedfac9a78 = $(`<div id="html_021170c98b3010d516473fbedfac9a78" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Aurora Centrepoint Medical Offices</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=14701%20E%20Exposition%20Ave%2C%20Aurora%2C%20CO%2C%2080012" target="_blank">14701 E Exposition Ave, Aurora, CO, 80012</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 303-338-4545</p>                 </div>             </div>`)[0];
-                popup_b84de0a4c7c34e724d2d715ff5cceb01.setContent(html_021170c98b3010d516473fbedfac9a78);
+                var html_48210f2624b8487eb4b1c66a2bc4e9e3 = $(`<div id="html_48210f2624b8487eb4b1c66a2bc4e9e3" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Legacy Gohealth Urgent Care - Cedar Hills</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=2870%20SW%20Cedar%20Hills%20Blvd%2C%20Beaverton%2C%20OR%2C%2097005" target="_blank">2870 SW Cedar Hills Blvd, Beaverton, OR, 97005</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 646-9222</p>                 </div>             </div>`)[0];
+                popup_dbe1856d127a365d5f98df07db696c55.setContent(html_48210f2624b8487eb4b1c66a2bc4e9e3);
             
         
 
-        marker_bed02c4137cc50535d0b52e773b7a8c4.bindPopup(popup_b84de0a4c7c34e724d2d715ff5cceb01)
+        marker_d753df9c40a21bf03043967ed9100fbf.bindPopup(popup_dbe1856d127a365d5f98df07db696c55)
         ;
 
         
     
     
-            marker_bed02c4137cc50535d0b52e773b7a8c4.bindTooltip(
+            marker_d753df9c40a21bf03043967ed9100fbf.bindTooltip(
                 `<div>
-                     Aurora Centrepoint Medical Offices
+                     Legacy Gohealth Urgent Care - Cedar Hills
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_78e782c7a395e7973557f56dcaf71a89 = L.marker(
-                [39.548704, -104.872006],
+            var marker_3db23c1c2e9ee368971e4d04f625fbd6 = L.marker(
+                [45.45347, -122.77476],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_46d46dd608192fa8a3cb257bfafd43e9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_5884dc01f65633eab33476fc8947a6ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_78e782c7a395e7973557f56dcaf71a89.setIcon(icon_46d46dd608192fa8a3cb257bfafd43e9);
+            marker_3db23c1c2e9ee368971e4d04f625fbd6.setIcon(icon_5884dc01f65633eab33476fc8947a6ee);
         
     
-        var popup_db6fa66b7c9af34d58cd28316b83e46d = L.popup({"maxWidth": 500});
+        var popup_c3766f49fa26f3329b1bc6ff3afe8c85 = L.popup({"maxWidth": 500});
 
         
             
-                var html_da3309fc0edfa7fedcd8b0a51e387075 = $(`<div id="html_da3309fc0edfa7fedcd8b0a51e387075" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Lone Tree Medical Offices</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=10240%20Park%20Meadows%20Dr%2C%20Lone%20Tree%2C%20CO%2C%2080124" target="_blank">10240 Park Meadows Dr, Lone Tree, CO, 80124</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 303-338-4545</p>                 </div>             </div>`)[0];
-                popup_db6fa66b7c9af34d58cd28316b83e46d.setContent(html_da3309fc0edfa7fedcd8b0a51e387075);
+                var html_a024971566ecbe3646a6e78fb15cb6df = $(`<div id="html_a024971566ecbe3646a6e78fb15cb6df" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">The Portland Clinic</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=9250%20SW%20Hall%20Blvd%2C%20Tigard%2C%20OR%2C%2097223" target="_blank">9250 SW Hall Blvd, Tigard, OR, 97223</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 293-0161</p>                 </div>             </div>`)[0];
+                popup_c3766f49fa26f3329b1bc6ff3afe8c85.setContent(html_a024971566ecbe3646a6e78fb15cb6df);
             
         
 
-        marker_78e782c7a395e7973557f56dcaf71a89.bindPopup(popup_db6fa66b7c9af34d58cd28316b83e46d)
+        marker_3db23c1c2e9ee368971e4d04f625fbd6.bindPopup(popup_c3766f49fa26f3329b1bc6ff3afe8c85)
         ;
 
         
     
     
-            marker_78e782c7a395e7973557f56dcaf71a89.bindTooltip(
+            marker_3db23c1c2e9ee368971e4d04f625fbd6.bindTooltip(
                 `<div>
-                     Lone Tree Medical Offices
+                     The Portland Clinic
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_2113021a289defa5d36d9ef91cf81610 = L.marker(
-                [40.000331, -104.993168],
+            var marker_cf138a2199ab1ee97a993f8e39294888 = L.marker(
+                [45.56473, -122.53137],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_f8056bc477be749b418bf8da9248492a = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_2b3ca94bad5054fa40614695bcc6a58f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_2113021a289defa5d36d9ef91cf81610.setIcon(icon_f8056bc477be749b418bf8da9248492a);
+            marker_cf138a2199ab1ee97a993f8e39294888.setIcon(icon_2b3ca94bad5054fa40614695bcc6a58f);
         
     
-        var popup_0311b3a3ac7a79844dec8dc020d7cec9 = L.popup({"maxWidth": 500});
+        var popup_2d384e144552879fb07a58fed762ce26 = L.popup({"maxWidth": 500});
 
         
             
-                var html_c6864ca77975b51e12c1c91a15c0e306 = $(`<div id="html_c6864ca77975b51e12c1c91a15c0e306" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Children's Hospital Colorado - North Campus (members 21 & younger)</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=469%20State%20Highway%207%2C%20Broomfield%2C%20CO%2C%2080023" target="_blank">469 State Highway 7, Broomfield, CO, 80023</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-777-1340</p>                 </div>             </div>`)[0];
-                popup_0311b3a3ac7a79844dec8dc020d7cec9.setContent(html_c6864ca77975b51e12c1c91a15c0e306);
+                var html_9fc1a4db51773d45f1d5810fc3deff29 = $(`<div id="html_9fc1a4db51773d45f1d5810fc3deff29" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Concentra Urgent Care</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=12518%20NE%20Airport%20Way%2C%20Portland%2C%20OR%2C%2097230" target="_blank">12518 NE Airport Way, Portland, OR, 97230</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 256-2992</p>                 </div>             </div>`)[0];
+                popup_2d384e144552879fb07a58fed762ce26.setContent(html_9fc1a4db51773d45f1d5810fc3deff29);
             
         
 
-        marker_2113021a289defa5d36d9ef91cf81610.bindPopup(popup_0311b3a3ac7a79844dec8dc020d7cec9)
+        marker_cf138a2199ab1ee97a993f8e39294888.bindPopup(popup_2d384e144552879fb07a58fed762ce26)
         ;
 
         
     
     
-            marker_2113021a289defa5d36d9ef91cf81610.bindTooltip(
+            marker_cf138a2199ab1ee97a993f8e39294888.bindTooltip(
                 `<div>
-                     Children's Hospital Colorado - North Campus (members 21 & younger)
+                     Concentra Urgent Care
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_fa5e1a667bf704efb5753f86c6a72b0f = L.marker(
-                [40.196327, -105.102396],
+            var marker_0b6a7ddc45c063275237a073c8be9360 = L.marker(
+                [45.53384, -122.84849],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_bcda2bf1422dee03de3770ba204b0fa8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_e10d33e82a0b4cfaa32f0b2a48ba9942 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_fa5e1a667bf704efb5753f86c6a72b0f.setIcon(icon_bcda2bf1422dee03de3770ba204b0fa8);
+            marker_0b6a7ddc45c063275237a073c8be9360.setIcon(icon_e10d33e82a0b4cfaa32f0b2a48ba9942);
         
     
-        var popup_b9ad79808ee1c07243d8156af2cdffd5 = L.popup({"maxWidth": 500});
+        var popup_b020b1b98b264d1fb2e49253c3695219 = L.popup({"maxWidth": 500});
 
         
             
-                var html_6684d584bdb1198fd39ca36e0b4010d3 = $(`<div id="html_6684d584bdb1198fd39ca36e0b4010d3" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">UCHealth Medical Group UCHealth Urgent Care - Main Street</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=2101%20Main%20St%2C%20Longmont%2C%20CO%2C%2080501" target="_blank">2101 Main St, Longmont, CO, 80501</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 720-754-8030</p>                 </div>             </div>`)[0];
-                popup_b9ad79808ee1c07243d8156af2cdffd5.setContent(html_6684d584bdb1198fd39ca36e0b4010d3);
+                var html_bff3dc15ec11efaa73ca83e2d5476ddd = $(`<div id="html_bff3dc15ec11efaa73ca83e2d5476ddd" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Legacy Cares NW Cornell</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=1960%20NW%20167th%20Pl%2C%20Beaverton%2C%20OR%2C%2097006" target="_blank">1960 NW 167th Pl, Beaverton, OR, 97006</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 276-9000</p>                 </div>             </div>`)[0];
+                popup_b020b1b98b264d1fb2e49253c3695219.setContent(html_bff3dc15ec11efaa73ca83e2d5476ddd);
             
         
 
-        marker_fa5e1a667bf704efb5753f86c6a72b0f.bindPopup(popup_b9ad79808ee1c07243d8156af2cdffd5)
+        marker_0b6a7ddc45c063275237a073c8be9360.bindPopup(popup_b020b1b98b264d1fb2e49253c3695219)
         ;
 
         
     
     
-            marker_fa5e1a667bf704efb5753f86c6a72b0f.bindTooltip(
+            marker_0b6a7ddc45c063275237a073c8be9360.bindTooltip(
                 `<div>
-                     UCHealth Medical Group UCHealth Urgent Care - Main Street
+                     Legacy Cares NW Cornell
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_ce2cea145ce98219ed81bc63ee1e8a47 = L.marker(
-                [40.19725, -105.102419],
+            var marker_475c10827a559e48bb4fbab95f7b32c1 = L.marker(
+                [45.64622, -122.66859],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_4bcb01fb1771dd8426a3df24fea1802e = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_ffd9379741395e3e9e598262c46d7fab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_ce2cea145ce98219ed81bc63ee1e8a47.setIcon(icon_4bcb01fb1771dd8426a3df24fea1802e);
+            marker_475c10827a559e48bb4fbab95f7b32c1.setIcon(icon_ffd9379741395e3e9e598262c46d7fab);
         
     
-        var popup_c2168c612b966d60ad8d866097cc5f38 = L.popup({"maxWidth": 500});
+        var popup_2f29aa5d840d5a8a947ed6593ce2c335 = L.popup({"maxWidth": 500});
 
         
             
-                var html_c84c85e426a028c271e7afd1d6751045 = $(`<div id="html_c84c85e426a028c271e7afd1d6751045" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">NextCare Urgent Care</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=2144%20Main%20St%20Ste%208%2C%20Longmont%2C%20CO%2C%2080501" target="_blank">2144 Main St Ste 8, Longmont, CO, 80501</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 303-772-0041</p>                 </div>             </div>`)[0];
-                popup_c2168c612b966d60ad8d866097cc5f38.setContent(html_c84c85e426a028c271e7afd1d6751045);
+                var html_48bb5c367ca0f5fc60307a1a4c82d0e6 = $(`<div id="html_48bb5c367ca0f5fc60307a1a4c82d0e6" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Peacehealth Southwest Medical Center</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=3400%20Main%20St%2C%20Vancouver%2C%20WA%2C%2098663" target="_blank">3400 Main St, Vancouver, WA, 98663</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (360) 696-5300</p>                 </div>             </div>`)[0];
+                popup_2f29aa5d840d5a8a947ed6593ce2c335.setContent(html_48bb5c367ca0f5fc60307a1a4c82d0e6);
             
         
 
-        marker_ce2cea145ce98219ed81bc63ee1e8a47.bindPopup(popup_c2168c612b966d60ad8d866097cc5f38)
+        marker_475c10827a559e48bb4fbab95f7b32c1.bindPopup(popup_2f29aa5d840d5a8a947ed6593ce2c335)
         ;
 
         
     
     
-            marker_ce2cea145ce98219ed81bc63ee1e8a47.bindTooltip(
+            marker_475c10827a559e48bb4fbab95f7b32c1.bindTooltip(
                 `<div>
-                     NextCare Urgent Care
+                     Peacehealth Southwest Medical Center
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_9a15d168d633c347e378a712cae92c4b = L.marker(
-                [40.380686, -105.512846],
+            var marker_f51fc54495090f87e2d19ddaff3fef16 = L.marker(
+                [45.49431, -122.85894],
                 {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
+            ).addTo(map_30599ddc8c8a86d19a0e0004e44833ee);
         
     
-            var icon_04c2d3e47536a9fba7644e2acbdbc420 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_7463ef892d99da54aa1d17d984677c5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "hospital", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
             );
-            marker_9a15d168d633c347e378a712cae92c4b.setIcon(icon_04c2d3e47536a9fba7644e2acbdbc420);
+            marker_f51fc54495090f87e2d19ddaff3fef16.setIcon(icon_7463ef892d99da54aa1d17d984677c5f);
         
     
-        var popup_6605369335c394f0bd480806e867228b = L.popup({"maxWidth": 500});
+        var popup_8809dec90aef166889b25b872e7ed265 = L.popup({"maxWidth": 500});
 
         
             
-                var html_fe8953d6ebd32e9b19a594841a813443 = $(`<div id="html_fe8953d6ebd32e9b19a594841a813443" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Estes Park Urgent Care Center</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=420%20Steamer%20Dr%2C%20Estes%20Park%2C%20CO%2C%2080517" target="_blank">420 Steamer Dr, Estes Park, CO, 80517</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 970-577-4500</p>                 </div>             </div>`)[0];
-                popup_6605369335c394f0bd480806e867228b.setContent(html_fe8953d6ebd32e9b19a594841a813443);
+                var html_017c55e8a25d9b897a21076a4b082966 = $(`<div id="html_017c55e8a25d9b897a21076a4b082966" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">One-Stop Urgent Care</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=17600%20SW%20Alexander%20St%2C%20Beaverton%2C%20OR%2C%2097003" target="_blank">17600 SW Alexander St, Beaverton, OR, 97003</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> (503) 848-9110</p>                 </div>             </div>`)[0];
+                popup_8809dec90aef166889b25b872e7ed265.setContent(html_017c55e8a25d9b897a21076a4b082966);
             
         
 
-        marker_9a15d168d633c347e378a712cae92c4b.bindPopup(popup_6605369335c394f0bd480806e867228b)
+        marker_f51fc54495090f87e2d19ddaff3fef16.bindPopup(popup_8809dec90aef166889b25b872e7ed265)
         ;
 
         
     
     
-            marker_9a15d168d633c347e378a712cae92c4b.bindTooltip(
+            marker_f51fc54495090f87e2d19ddaff3fef16.bindTooltip(
                 `<div>
-                     Estes Park Urgent Care Center
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_c00f78c68079c83e2fdacbfefe07ea18 = L.marker(
-                [39.081726, -104.85744],
-                {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
-        
-    
-            var icon_6cb122c13ef7e52be71e72a4775cf117 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_c00f78c68079c83e2fdacbfefe07ea18.setIcon(icon_6cb122c13ef7e52be71e72a4775cf117);
-        
-    
-        var popup_fa10cdf361cec3b980eff54f3e77f923 = L.popup({"maxWidth": 500});
-
-        
-            
-                var html_cf0f93f1d6aeddbb8c158ea1180bce06 = $(`<div id="html_cf0f93f1d6aeddbb8c158ea1180bce06" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Centura Health Urgent Care Tri-Lakes</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=17230%20Jackson%20Creek%20Pkwy%20Ste%20120%2C%20Monument%2C%20CO%2C%2080132" target="_blank">17230 Jackson Creek Pkwy Ste 120, Monument, CO, 80132</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 719-571-7070</p>                 </div>             </div>`)[0];
-                popup_fa10cdf361cec3b980eff54f3e77f923.setContent(html_cf0f93f1d6aeddbb8c158ea1180bce06);
-            
-        
-
-        marker_c00f78c68079c83e2fdacbfefe07ea18.bindPopup(popup_fa10cdf361cec3b980eff54f3e77f923)
-        ;
-
-        
-    
-    
-            marker_c00f78c68079c83e2fdacbfefe07ea18.bindTooltip(
-                `<div>
-                     Centura Health Urgent Care Tri-Lakes
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_1edce78f8f4ffe46902eb69660e25996 = L.marker(
-                [40.405118, -105.040474],
-                {}
-            ).addTo(map_1917816993bd1ff70464b123f648d986);
-        
-    
-            var icon_4091d3d529154263ebd25b99ae682b6b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "notes-medical", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_1edce78f8f4ffe46902eb69660e25996.setIcon(icon_4091d3d529154263ebd25b99ae682b6b);
-        
-    
-        var popup_959358c8729826ce40c2697a5ffa6917 = L.popup({"maxWidth": 500});
-
-        
-            
-                var html_304c62be959c4a5bd593e96b2fbf0687 = $(`<div id="html_304c62be959c4a5bd593e96b2fbf0687" style="width: 100.0%; height: 100.0%;">                 <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">                     <h2 style="margin: 0; text-align: center; padding: 0 0 5px 0; font-size: 21px;">Banner Urgent Care - Skyline</h2>                     <p style="margin: 0; font-size: 15px;"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=2555%20E%2013th%20St%2C%20Ste%20110%2C%20Loveland%2C%20CO%2C%2080537" target="_blank">2555 E 13th St, Ste 110, Loveland, CO, 80537</a></p>                     <p style="margin: 0; font-size: 15px;"><strong>Phone:</strong> 970-820-4264</p>                 </div>             </div>`)[0];
-                popup_959358c8729826ce40c2697a5ffa6917.setContent(html_304c62be959c4a5bd593e96b2fbf0687);
-            
-        
-
-        marker_1edce78f8f4ffe46902eb69660e25996.bindPopup(popup_959358c8729826ce40c2697a5ffa6917)
-        ;
-
-        
-    
-    
-            marker_1edce78f8f4ffe46902eb69660e25996.bindTooltip(
-                `<div>
-                     Banner Urgent Care - Skyline
+                     One-Stop Urgent Care
                  </div>`,
                 {"sticky": true}
             );

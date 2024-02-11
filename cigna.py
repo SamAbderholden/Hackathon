@@ -2,71 +2,78 @@ import requests
 
 
 
-url = "https://p-hcpdirectory-waf.hcpdirectory.cigna.com/public/directory-provider/v1/providers"
+def get_data(zipcode, plan):
+    url = "https://p-hcpdirectory-waf.hcpdirectory.cigna.com/public/directory-provider/v1/providers"
 
-headers = {"X-C1agk3na-A":"KVlcKa3BHpNJA3IFuqutvB2z6t97zzJ3G5jCLYItIctfsYmP2JAWJeygy6IqhygpmhtM4_nG5OnxPPN1a_pqmQeYHu1-CGcDmntQZKweh=fH4XxZoHLlf2l2GTVmXp_cejpxEYnh9Q1cCb647NlrDi5hq3=iusr5I=gP0iAq1evpViNFrPKL=-3yOZPej43DSKJdn32HfnyK0CYNzENMu8iX47CGe9_ezN-0=VDWoeeQuyOBTbn9xGlgChXS-f_x5DESmCf-PjUhU8DWi95UGbh1Y=hf=qmc-97ZmdY_lBzbT8fc4Qy4BGcU=g_fpliYPhdKhxzOlvq6sub7pYqaY4OCO6aB74VmSOCoK3shXVYapNOmiWmzQ7WNKScmgDLbNp85E9hfxlzJ9Yc8y0mrzGXdDWheu0eiL9CLK1t=4kYZ7FhHzwqKv6lYLnGPHq9zb5Xanenn8Kam=IV8qKAxX8aKJgFLxhuQS6kwybFTEkm1eMq=PCCbmWYGhTjh=AnqgrEB9Wi7yK6QfpcmOZa-P16Ch8oNL8cwztyt7UEVD-=ZNTzJZT561NJsXs0g52zI55AX5e8TDxYnh3ytJI0THDIo9EJK70NLo3wmCjcjKOdun=f_Zy91sHumgJ86CarfGFHOkdITcL6SigKGleL-A5lbCnkQ5LErJhG6HtVaDs4=XmhQ_Oe-rjgE89ddfTZK7NjaQXr=IKmnOqMGaHG4_aZGHfZEw-BGjOegmk21JQy94Xx8kuCw_D04roaufLn19AJI_GlxclJXmz396KUDa3LQj0=m7nvFNMBencSvqKnbEwbdzEhU9QiWGjYSGGAJvHKi65h=KTBSDJWJ15ENLAuFwOMXsIohmaimH5Sr=qrequr0xhv087XPtyjFsJ60XHA_CGOu4i=_ULVPv5fp8s=Kr-bAMwVPMj=0IPceTFka0nr4B_UHdIzb3efBJiXKvdDPj5OUpcFN2b-96KHfVeomGnMIrCFjUECE-l6ZimzW-AFE23J4t97rCwun94PJYzj=4=1oDE-6vBKXufHPgzrq1zmnT96gYj-jE9q8wrYFBrxJYPuBZjLddJfGjsICxnXJ6CLx08ryiokED2GrtqlNUaDX0YO_fTLF8MheQJ410qDrt-viMmde=VQhKZtwM88Q=bjuIgWFUQvHXz1-L9awGXIYz63vxrjjN3v4oo--GQ70Ouz36YaLSWrUYun19YsiYzG_O1wGZPrDVrnyqyYl6ZbMC6XUXGzwsy-71S23sZ1TEMz5D7kBx5JeDkyHYFd6Eq0-fPqJ9LpGhQkAkJxr8DTaKL4FhqPZsm5XmN9lcfQLAm0DiQ5MOpAx=Kyr8rDtMmTNbshqzV3TP_liGJteVpj4PW6h=fDS8gjJnVmZl_5YZ2ZPM5vCLkk_q-cV3y-OOIEh_Brgp-vKvNQQ3DOyV5==k7K3x6Uz1kLdWOD=bnIjFdZ_mKmoz3n86LOElY7EJtW4xBiHqs2Qlb3p0pS9G8V=tqV=BYpZYhFVjESDqN_NMWsD05yhK3MyInVBHXIyaO0D=j_LfkNgaFsKMftHd9sQD3_i_z9VTDLXLoZdqfdtVfc3jc8AtqJE3-=B2wJSJ3QE2mrJp7K4c9z0EqafGa1-epzdtzfMEn5eT3Jysz=7cZylwgo6yA-eMN0LMgxcUF2EcqX2Luuabdn8Fq-G4H_aLqBD21Hg78PQpBHanBGFomlJaUGGhKjSFcj_K=-2ZzZMnVTZd0P4jNqK2ypp=dnTVBGLgG8ONPQDlU=zfbdkoWoN2UhAnpB762x8Hx68UXwv1hYMpIGecjExiVdXI9yblFabFeBIpVtzXMWyy6EfmOPDlEwkijaWyBS06EQTXDbK7NGNNyi6PF_TNQm9g4DK=P2jz2grW=x2I_WQNVd-FOOJ76CfJ_U2qBmGSGJQW6nJPl0qmGUZmMgjl8IENfqcwmDZ==OeZobhfIg8VwZvc_5O4B8-pFPdi2o1e8kO=Nqm3uTwEZ-H6cyldNnetialBNU-ui9s9aWW7HWpdy3z=m_MHHXZIzebTCoiHvh612Nn-cyU5JtP1eG9ptjV8QNy2FsxemnL73OTctNP3FmPO3-i38J8illD0CJxYxoKcBG36aFCQO3vG2bj=nZA-HeuIww-lxg6BSM7nUFYEugXdTrOnSbPJXJnuuK86BiPHQ4Ok_E6qp1qY5jYuu8bz3Q_qs_IZjha=t=o8hQsGSMy2fKJozAuciMlPgDsh81YsLJnE1y6imiHcSgi-vOh4_Z6jfcSJZ40_FOhu70IjFXKvSO3SyEDH_7fDa186q2jdHP1HTK6mqFqyWKm9WM_aLfVSSJoL_SHVY7Ie1X1HkNXbnpjJ4zrZ30zeEw5QzWwyPvQZKCl10-o5lpq1x9Sih05hoxpH53uc=GQN8a=V7V=shetcjPdWo=kvtwPNNZ9xVA483iIbynCnxAV3KE1mmfDFoB4BdbKUkGKkiv0ghFiAoWP_FGpQttKGo91PqdqU=1Kw-JQfhXdauoSCxv19zmywgfSMKOGU9fCPrMj0d60QHTmkn-FI91rPD5kTZiLh-ucVaJH2wB9e-2oKexGl=gfZ2yTQu-9opA3zqkzu04gh4zHWCYTq0n3bSGPysHisySbHS6cTog4x5rLPYBdaCaTKMlQTbxoWWBEtGIwC-gg48e2ZlqOkMbmroTZboosCGrmZ2bZ_gOd35rYi4_37jOji9_QOSkyA5EblqVEZpZKwoVJBp1b5tC0Ow3T2D_-aVzXlL0rT31dkM5E4uMWigO2XKcOBSutpOlWX2UFKlLBofxGkdcA1A0eahd-pBlXEodxZVX6XgWmDNz=ATWeqEr0SH1AM7D6DTMKF2ut8iVc2srpdZDTFtX=qhO-jPPtD6nKpP19G00LV_vAyIIqa0aQebizyp0pVwH5IrXUQjADLeWAU8DwuEOa1g672hXoQQNon6=7r3jHmdduPgfJM4CgrpSyLhv7bKSbkjGPhWj5zcBXlE0HzXJado-CPMqJLIbDo-v0oUqojWJXL4wbYETsCfK=v7fUrAvUXM6SgtKoDs3BYMT5SqLThcJTvVhHog3DdkxaNgs-Few3zQI5SgJNtyzy96_s0-X4M-Da-ts9snvv=c3cJ-aP=vfkVzcKpkyMovdCkrqaBsvXZ-x22_jbf6_Km2OcX=O6rxfY2LqMdXYHuVW_I6SD64UcUJonHCCqNuvDAPcgkDcVe_7Aw2x0Fb8G-DZgBN44ka_iGKlbLE3Bg2ITttUiaC7brBsBxi6KMs_D5DgBZAVumV2nTF6b1hDdkN=vNMPvO2UoxTzWwuS127=qqTo3S6=Jsl85gZz7nw37hfgKxqaQ_z_=Jr2leVJMk66mJaqxb0QXKDt=UL3wWQn2XhKQhzM7oYPCku=u-4hSgTZXXqrnqrSeZf7KgUU2=c=xGDDm9Kjvt1tB-cpmSy=EvOgCbeVy9die3pkbTf6n-ja8zp_1hh3UGaN6mZ3d0tcMxqqnO-aUm=01SyEM5Z_hAeq8yPDKfb70OQPjpWG2cAIMvKvadfN1MaCa242sCjrOjpyAcbEbI_4Zj=lNdfX0K46_lZauWJLajuZxQtNZ777IaCKQn7EuaOGrfMKkvsEnUm12NakTiQ-4ZK9AZUPbXDV1gYwFuuJBEII-_08=n2u4NErpNyQL7XJIcdQ3x-3CxL0_aSL9zUkSbUdBh5hCvC5moHoAwCJzA_7BFWCar7ZY=tmx6Gvp7ZgyN3M=Jt88LFc_yLyyxKkPF-aC9MwUt-HLQw8r6Piwkx8gQu_yughU62ZzINvd_yfcfeQD4ff73gJJcTkmTKjydIbih18F2obF14f8-wuoftGI1tfPayXzTJskS-0KClV-Oq84O5lJldZPNBkMk_KYegs2O-zPC7OfILyZBsUx7P_8GdkSw7LuBWcyEnl8PodsqO6ba8r-LDePVVxJ_uvQ=543X-wwEsqET8G5BqmpAX3_oQVfdUz_xVchy8YN0Urye1gy0xPQ=G=IVc6EO=60mFJle4NZ-V0ttyqJCVB1zlAHW5flgNgkWIFhpvduHG2IMBoNp64dTMdogZu-9-iEpVKSaMe8rqHm-BojfFweWyuWnTBVOZqQJlQp_goyZ_L034K0Vqo61jWVQiHFNvkbcgIPBChiwDFhsL-XYQT9E4MlYVF657SaQVGDAuFF_klB=WnpnOiocsloGclfIsg9KF-M-ipJvKI0tEDVw_X4C6YTIiIWtxE6YtPEQUY2az-rynqasFZz0s-a=XL07VwhN43Kq34_=_sISzv81uDQ0oc1bT5bEp9EZB3NGUHoILALlGXz6oP6yPhroCUEJq_AgyWPDEhzsC11HLY3auQ64EAt0Hz2_7hb4LCceA2coLayONzSyjlcXIx60AIti5Sx9-bWpKbPuedgGU8DkJBaOLHE_0cwuS-2ntZHs9_I0ELh5s9UrlNtmZ1=XBuDyhuMtT4iDwTz1XGh1HT=FkC-fmqXmspc_U=y0D1yn7b5F1Ygr608u53H0fiWurs4dK-VQcVq37sm7QVvTEdis0Ch11-J4NU7CXpjm3SKoQgcLMZ3B6aa5Ydn2oguuia7BmTFBLCoUoWhcOWxkdiy6vsTZq_vPMw17T5B84vDtkahDpKMiZu0Ias7mfv9lES3JNXZ7faJh12hmwU1G9W5KBGGEZJh4rU25oj9ej6CWvj9QwJqs7K=wilO454kUsHqyfNLpAauLiXCQ_00C0r5_SPblLwYHJVpTQe7leotqoiOc7A39UtlIc_pYQVETmnZtavw0zXIelspZ=FsD3g-nsBsOqq5Pvw_SdZECDjCitwTN=YHAFoiZsDpIcPTcsBoieMgWbF1oY9lbnwjUdZjDmKv99rWjNyA6GHEDbw2hUNxQxrkpWZvc2vA46xr0krEqNNfCzNcK5Q-hg3Ye687jxprY-OxOZf-ZEHLonnI4dPjbNOkQb3yNEgYTjY96GMPA7pPciXfae7GykiVj6L0vOzWwBZoHKHNE3vWzvHCT5P6=6t=zZaE1FnmQyIwsMHOqCK5LnwasV1rflyKh=tPorWzqy=mmtaWyDn0Dx=yB=LtUNWOq1VxuXUA6mj-JeS=_dyWZA-xWixuU=MEdm=yKn3SUaIYDiJydn=CA2wJaTp_EQ3eNqG63KO4uxYeWx3dnsVWgCXSNMlZeQ3KnBEy4G9MbCjqee=h0_suwj6i4DxqrLGab3yTOsVezuT-41MGk1pFT7_FOTILchOx5nOHSP9WY5qO-lO-1AY8tw2_Q359HqH_BcL2oA0Xf8rt68ykunYyb50-885mhN39NrBqVrBCwPz2jNlTbvpskMfyWzptKS0CboJZdPqVqTgPbNojjmd1pk6HekV=izqp3ZSt1=oYDimxaTNY_rqkoT3GMz6oy0JJgVMBUObw-xnQQNgqzCwOLGcn4vkJg_rATVDeOfZIzyEZq=xgmgrZeYdq=Mjp80D_ZDv23Ee4tmgS3D4cg9nEBf1-sGMBMrsa8-Q1eNK5JeTM3_mJgre=LmpSCxPpTQ72XxZzPfOFjdX6AYK1zYKlKipTSzoDMDviBiI=e-stp9tlhzsf0HtXh8YP-mMEcra0eP8k_V0iD0D4uZXF_fn58dD=vJnI2bLolGUJ5cuof6_GK8IvNEvjywGWiCIb_P1l7tb86Qfbv6duHwblQAUOsggc-VIKAHUxqMv2hHvqi=qo_AcPm3mzPv9du_mWB_SKow6aaDUSdy4TB7arQuWkTgc6kXd8jbwquXao-ib61Wk-b1jL4_=SUNadrzQNlmVt2sU3tnTFBH1m-iHkk63DVBGplBgVd9OGpIonYbF8U4ea5hXHnujN01ouqbVdoAcW3-EAI6sPfwK9nDozt4m4A1-Zlb7wTIlGk=-_AcdxKdCU8AtV4VVyyDWKnmdyu2tPcWWNhGMrUL9IL0l6TbqWD92CU1iJ77-eGvLn_FTafoMXVaLM33lq3TPGbdUxnJhKpLYhYFg8gU2g5P8nMenkaQ1gPMG6PFGM834waBH5Nkf1IgMk3Wbp6=iUcPp9fB4VxF0UDVnOPeHbV1eqPyACTZAxn5wnA1rr5vOUboG4fNs7_BI1dkSoojig8zJd-3zOQwbUlSkm82AgaQUkcXGYYdeXlDh7o9BkqZ-3CwDNUXEnksViNONPXBDPF8ZaXSP7hxiqBUomcgzaApDjy1D6S4VxzlTK0_0SyhPa38yxA_D=nkA6=Acu4KuWll1gjyLPt2TD6GNNpGsb0d3eMEY0bBiVMAjGXckfYM1mxtNqISDMaea-Wwp-4NgoX3cZAe5c6MgbhIx09NB14v3IEMK4ijn==DaIurjF8ESGZP89wQvYsmQO5FmvVgSam82ac9-EcZY4k3VJgUpd_VEghQyEsjOsSv2wTVznI-wOXtEbMpxISfXEr2PZBaFNbwVDfYMPDi4wN-boeo_QXf7kn7AhOUu_lMqZYi9nQkBv=Yusu4Sk1FfCkGe7XBEMJxX2bAfuT8GxnSElgsldtEjhyvOn1ZnBJ_ZZyTztS99OI1h-0NnjVS4NEM=WB2gX=Ls5ITV9ddkAHTd4N5ftWskYI5XSCkqd84XvkDSIYVOZY7PYeKkCMHyESm1G=zHDysH3LJT6p7gyuKhnYp2Jkm9KPGPMGC7S=8-F6K3QpIgoc2It6OV8KuIa6t7BWDKGUjJ9=ZiTWrvXFStF2JgxckS9za4X7LBn9hSgMweovHSKIAPQHGcSjxB6KGWwLg8PnDE_10dgb1jp1o7XG0FKfAeF6d6QeXh=Ypjte78-rF2iSiNh4-gPsi1418QXubfcNdf=D2Li15v-Hgdez1S03ecUNwUV3Y1sYHH-8urffwC_s8acvacJG9x_Wy4A7ovol6_-ip3qBhBbLYwyn=QiX5=SlaqzyhuShIWIrAcLCNkughN=MOY-oY5wy2NTzIUYLVZyGam7ecl36v5ieaTwBBwjgixaf9_dNNtaP0AYnlYY3qOLH-ebtXyHSQGbLMCNYI30cI2=Lk7yHgBt2UQzKtyJm9lt5dBl8nniqQMTdqnB_3=P-Z11GuJtOt8UuqwcqmElthLlb=frHOpFlVC6VQV_ntBmV--ylbiVXrYi1FdrrUTDmvWrYCDd1gcvZKew=00IsQGSsBp9dcbOP8at-hQyTxbAnaQ7xi_S7l7G5dnQ_LEcSLnz_vU7BrDn7jkIHSvwZI-IKPTZyXys3_vSO9ZW4eg6C13YlzCSeqTJF5LvSOJcp96hwWzyhBZ9e9l2HS_fy6nmOVuqH87L1UoePJLOysfTF6u8xa=e3ZPfD0wvo4qzP2fdZmZ7Whr75wc3cC75nxm1N03aBkPDPSF7GOm",
-           "X-C1agk3na-B": "eiyg97",
-           "X-C1agk3na-C": "AMD6EZWNAQAAOJOq8Z7mLAzKjVZk6P7eySjAB8kTh_2MLrqL0bDTDPTuGhLQ",
-           "X-C1agk3na-D": "ABaAhIDBCKGFgQGAAYIQgISigaIAwBGAzvpCzi_33wew0wz07hoS0AAAAABSQe9sANY312MFoKyu-c87h7ctOqA",
-           "X-C1agk3na-F": "A0nhFJWNAQAA5FsMIHkhMWNTdiv1DYqcWSLbnGmFEnRGAQAnR9z2quDZCoBFAUOmNvWuclIDwH8AAEB3AAAAAA==",
-           "X-C1agk3na-Z": "q",
-           "Cookie": "aH1sihCg=A_V1FZWNAQAAXfVewKVVjRmhUEKwGGwL1FJxaxWtiyJfEapf5XrEkqfKalYOAUOmNvWuclIDwH8AAEB3AAAAAA|1|1|a24d5c1651019e2c791da76fd433094ee5d91757;",
-           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
-           }
+    headers = {"X-C1agk3na-A":"AG-YOLNRJQ0wopNrkkiih1VQkE4iwLpxkPnAy7wBVmPGjqP44I1XoLKBJfw8qG8RHRziB_mMI-lkQ0NdWA=RYOwiaKusSL1klhL-Twg_9CX9rANoX11255uybkdNFRhkBTFpeQbzppqAdtIIGgb871GYmPBHx3BxiXh5gK0ybzD=pmADS0M5Ayr5v3ys9HJZO-O_mOY4RCq52TwW81I1QNXYiIObixdsgTG4HCgRJ1Ry5XD1RfdYPnfdVpeA3qkgU8ilONFEPNFSFfHpwmonBvpErxiMfvjnTmjSqZjjK5oNGEYZvJHmRimEwS_NdiwEb6RlC5y=jJ2LLfQqLP6zXYJDi7XGzwirpR0oy3nx6Nb9WSpWY=Wv4dwr73KlusYu8LMwtGMdFV06YXFJ84CK-Ulmxv7v4Zkvb3x6k8zQiA9CNgDZRTtd0nZ3OyNSmm0Bl6Y05IjbgIT3EqRBJyxSZ6tlK8U9UXBh17pRdPoF4Yn8nd_aDibwDGJVMmHYNo1vd0JwhB5VBHnjDfFBXNfYuTKVj89q_x-6uqjwa9dvFTjSBQJPP4T=iRpWO3bDW_YDtYePOFIFo2fEIIICb-0OYQ3A4FNR5yNLa_V5-drGz2OrT3nNtsqXwEOn293XFU9xHgnu-kdrCXOjqwN1lEC_RDY7Jf8rZPeMr1na3v3-m-Rti2Y1ywGzRdJ8ni_FdJZELdps-Dy=MXKi05pfFYAE1H2K9eU_p16e0hlLhUPxOMKiGU9CiT20378BVqiMyJTa8CGiz9ug_0iqPLJ2lrOz83foQo3UQWbwl3YJ5TlmGe1U93DCLuwsIiVDdlOxeZP7hA=EsamrfDOmWI=pUtaS6gbWdb12uppuHkRlRs_WCEE3bbNZmnllPoFZ4g9iy_vgTt4HR0urBfJxSrJMOAsf3IrKwRYWH4RlDdSAUgDrkj_xtnI14h6vUhGAT6NDpeRGsVbj64LRL-0gXz5rPvapmapbauUI_nzGEAgAKyqj_9pQ0bRsUyEtJF=9PHj87GVXMiZX=NdO8XayGE8UShBt1wmoy1xtR_546TfxL0OUhwUIXhrR29PjVk_-b62FM8ovmdaOrgh3uxPkrYA9W-jDIWTsmroM0Nx-lA5VH_xfIyXW2=n4dxFSdvJXaJihCUNH6CTf3m69-92TrJoKsuSnyaCLpsyeagP__=8OsgZsX_dggyxMVmHHNML2SL7JiCYl5R6ogPz36QosDVe9b-K6YQ9K1O7RVYmeU6QwpE8Dp2OE6332RtwCQKIpKHX4j8JA9gnAqtgBfKMTemSVF78M_RtZZGFbvzj=MfrWAYY7nIyfVh61nEskYkltA3jz-=IHAjE3glR=Pfq990m8jFaKOUfGsFxGjgTXv7ppiR0Exa4r26tfsYrknkad-D29ZfNMeIUf=4OmtFVDaP4=wrGuoIDqNrhOQYU8pqF6-TMn8nXoK-Q2S-wEa6uz1kbL0Gz6VqV46mXXPYmk31j43LxzLi8stWSGk8RH25ZmkmyCwd1fCZkVrPnlyFPYTtKb-H4yUU7=zXW5vvVzVMfwIvtIMhT82zxYZkdlyVKLlNCTxiozza7_FSoTXmmuyiqgz=-wwrYaW4xWTICWbKIj86ys=nfKTaOGCPH-7v-iqF7kZCdDr55C4QttIeLwI3s1BShSo63SZj-8HW8-hfF4Fhj-Auw3_z85TZ=aP9N5C2qVmjDvDCxps9LV_t2_2qt9pwO1A2L80ek0ZaXx-KNW1gjG7orXJodCF5iQXzfUdDRJeL61VShYA8UTgM3vexreXyhG2M8kJC51TdIszSlGZOxI78xEMLQgivmyfVgbVvs7Aam6yIOu0MnxjCaTS9UkJ61B8jhFDm=bsXVew6OdrjssMJryGn_zRqzux-1iTRD=f7rXjX6shCDWHisANJsfVpUwYuyLBij7gmEl9YhoS515CGrwJq54UD2xsdi3JptAUmvkh1WhkLjwdnAxhw0F8HmRvmDpHMjxaoxgw07rYwe-bRx6WWMa8SqTt4ptHlUryig5KXe09H6AZ3nBPwCWZUiskfifDtoli73X0SluLmtAbOLRY0KTtX7_wU42TC_ifI-fjr3sZG0f_4fQUkOwQln2JrPsbVDSSwKpA02PvBD7A0eYvjE=6QGjUt3dUi74vORzyvoGfzVvv57-oXv1_e0yWyEj=29AwNJ81v=khhBSf5BYP06Rk4AYdKFZ8MCAontizyfOwdP=FB2Txnawk-A5el-YHa28ueh0zwW36ZYi9YWzsM1Y479ur1h1-eEzLziQR7MeyZvTvVUSJtEG=LdNYTwsasEmY9uDj=sJo0WGDfLNsPx-G6bvq9Cq-xiXRhYFJZGHu8Lop9ZHSI7fjE9ADVs3EB0RvB0hjGTLeHpCt9NFM1bZff70sY4uqPR1D-rIBb2FphTS_zaM6TGpvW7pZuYrb5VzhQSnSYPLUnz8ngGMElGhC95VbD4u=WmMOI=N144XRqfxxJY7brA0LCLn=KqDyQg=Z=IDga=Rhgu4wz7RytYC-gHoFSDwlosSEUyA7oPRyBQ7w2qRhqpA-fybWoiVZICIsDYuTaKnZNYwXaL60=YHL6bDeNFfpKWQKqqTh7TEW24FG1tsfYm4W5wb055y5AWx3LC1WmxMPQWei-1PYPXKe-5_uG=F3ussyMEtK9st3vX_Zq3gLl_-fKoGM8sXMuI_gTojoq0UXeXMZpCt0WqqFlavau3tFfNF3ba=OD1VLzF2BWMqmH3WYPHZGrZNRHLB=Jh0HDf2ZTf8D-hn7IKeI02PS5JgkjS8Sktuts7kBxqD8SkxrQ59LEBx6q0PUCWJ-aP=MXLoQPMdZwPuLl4RI9GmVkRf0V0Tku7KgYekJ9WN6a7wztQWyX8VSXQVbIEvR2Z4fKfo8qIWTodjBzVeB-0vNIixsJoHjrO2W6G29o6RLitLpxiPFd-Jljau5i3U76OerOJfU6oELEkLGPEnae9w6AYIh2=Ak0-IDqh=28ZG93Pma6995dAIBHf1Ipkam8sgn9JMYoAn6swgBN49KztnsZ0vV8F40lP4iKTHPRJmDAYqDPXff8ahVDKAhfutnKyyxYH1ug4z4eVKvMa1o_FKQibupDsdnQmbIjn-1NOnabipHCTfygz67gPiqVlNpugbgX_mO2ooC8WfdxiHRp77wmI=vgvnhvjaldmbU41Skezgy-FKWtm06ka6ofDV1tR-IDB-2wbebaMQWJuNHK0xiSGid-hHeX-wINYhivH_IXwe-jt2zB1BWzPmzFzhJnstO4hJ4BKzx5D2YurjBIL=sQyu-b9nE6VJlGWuO2iMvLfSipx_w4bv=0U4k7vZQFYDK7jtToeeY_KJiHgYWeyvqRefDdhtMXjaRqYlU4UyUz-GRgqB_6OpXxBJGpnsvomFMp5g7Q7UPl059hQaalogR20zuXgHrVj2b3gZqW1prVsSppFlEre9khqLgn6PETK6le4T_nCeaTiGxlsw3fhTVHtjXo6AGNSlhehyq2SVU4_f7Evapih6d8UlD12Mre1fLmxzhRokqWtf7FtOdv1sfqEj8604NR689To_jL9XVJzgZ9S8RHzqFaraePdFHA9w=grahJmA-7Uevt5OPagzEWZvLsYm0iSVTqN6pgdAKuqNxyvwzKQoZ5t-kzMnOkzI_KXERKdOb2RtDJNAfJ1CuDeJmQt=BDmSwY6FroLfZ_GXR=JexSbSpfDJsqOzTw_t2pl-QXWhqBsa3tZvXVLaaVDLNuC4HJWCJkG_mT7bWAJ6=DDQ8BRZ3FXgBRqgpzeiKf3LVq6OMpMwo_aMhrkK=fo41Ul_AVe0utz3Kgi8MO7-UKDtjD7n1l8Uv7AIznlJi9878ywIlWt2Dtv8p-Dkdhl=blNGKDddJWEbHPqvQ9-lk7MkATxADUu79whRjkY=h5Jji3HbZjmPgFAreG7lyKiEOWkus8Cx9WEwK-heAEzb097uWI9r6nnWZwt5uy9Vv3-ImT60hagWPIHwj6CU-rfah2hv0qORhbPvYzF9wfj_egME=4BmlOxs3yLddgpzBVYhodhS7FDeeyLQnUmB8q37lYoxSk-5h3kRhnj7GBCDgjn1i=TPGmA280WiHETG5tsPrYFy4HRQS9xRJVBZT2-MHNzGwgv66drz3UBzvbME-G62Wkb8fVlzu0BfgRGp0ZMXab1ga5saHkUZBL666m5ICINP_6WY7AOdYttLs7MyTEBMe0jet-ox6U5yCTNAS-By1Kz=bQAjEk07RUM2bAk-QUCoB_vakXKptdMKR2jhtqqkJDM2VyCHetsiXiuSKw8WlgAHBf17BwehgfXSf7GArYCXNySV8a=qkz3osXG9Gx0VnmvGnMwyu-HufMLeCr=mAeWDD4OyuIfrd9GHod0uyxtN0HBZwV6S2ul5JKLfJYehy1QHDtQXSwpybJ3GTM5R6=Q4eZufiylqJlL4QyFVo=EpbMLyHU1EIouR6DQxaCg1aVzorGkIRuC_AzhtO2ZI-xIxKeR0L8BfS73MmWm-TVJTU0nQXHpFeOoIRsejabyX4zgN5gLDVVzk0s1oxzoWIHaXXzGZwlAqNmrr=RT_RghU=oL4I9l9_OSjY2M0L6-COualWhgg67EBPv3XJSmdZyNlu36n7yIILI1txxzLovqZjQCaV2AVRGoZfxNHuqPkzaI-SLvoS7VaOMpa8i-AxrNYHqCy921x1Jvtqben8f_BqM32UMHk9ueUNRVFDYWuqK56pVeQxqarbrsPppE97Gexq04YD6Mvn-MdHq-WxZVWJh_jgnm0Kd98U_4FEu8WSvn1f4U_=MfI1mF==HUDZUVmZZ2rP5CvMYW5u9UOsYEopqxB4hJmC4aXgn3oSRl3T9d4bfH6meDtfhbbRVFMnC3yCJgqbLmyRmVCoKE9SkkLkhtxt5flYJNge_srS3xSbm611EQ5KhuKkZs9klr=6Z2Z3PPisJh5bwJ1O8jFmOvSDUX7CLLHSoby8q0wClFAj1IjRAyWvDxtKosy4Y5Z0_F-RbtaHja7NZzgBpbr6izGgXzbrMZb7y2bu0AAgYteooK2a_8rjNooIgeyS-3Nh=EeU3vMOme-4QUni2IGLjzgZIFXTHFSmNk02VfNaOZ-g5jIgTlYb=Us8j8WR8is0SdR_ApGXMHmzfYZBYbznbCxaLbvNeCPlRqkBS=i2ySogLrVZ1rzNj6KhVubuA2-4Cxr314ad6CXAPGzdrMpSWSzl1vO6jAk0B2RMtJRkXt9b9uzJqzTYA1rykJTuAK=RW-QY2lsNQBjd2Xa-q6YXiumfC=q47PH5nOZPBD8smJZ03xwQVN5A_gY6FU5ClVNdHe7CDIp3UjSaEfpzKZ8vjs_E5khAj6F0ewuXkR7PBsmRoQG0pm8lM8NBuy7Oq4zyFEM4Frbl-4aGLzCAjS7E=A8mGQnmXENzS0-RRJyZwlfjfBnIU=qFW=k5q=HkjE=_PNTHlS=nRAB_PxGLSA-CzH2urYSjne7Ar4VNIBdeqO1vXMJQPQ8CtUK3Ub1BtnfF_-_y0MAVaZJ5owHN327NUQ5PORLbelun80MHz2i=MxqbMA9XVDIzKD0uSP9t-EYZySo5f6RnhG87lxafeslUo3JJEA2dbR563Muju=e8YDrhPCfT0V8DC6swxYIfQElMoTePp_fr=lOpNh9F65OW6hvd9o79qeJ6pmGFNzU876R3xe8U2n9k9kTJyRXQHb=Yff33S5R0AjPsN7CACMMURfxnhxxVbU64QIKEHBULU=9-r7eadPkVmLt-el3y7A-TYK0hxK3XpEl1OrITw=KCmzet=Pz9o1Ti8vQEInCqOHIsR624l4aztqIhCjTMsSaNG4G7s9YG7Cx3LmiznU9jW5gB5dD9HS7En2CG00EEwWd0YGp_dOprFfKVVi2C9sX_nNibp-iDY2uX8mw=60Kzskxdv65N7goF==gjeVpdOw3glz=MmEfjRhVXyw-lXLq2Z5fp=YDbNLSzOamKiKj9UGo2FE-ysgLotaLoFB7rqFNH9oa8uNM7vkYfqWXddNdm3H_g9aiTBm7ouWTaOC8-9HInPRCKTPzBIyOAPJO9nRklyu5f8CBrAItzzVR0ENPyu8_OmV2pAS7rYnBOd7PbFGN8_o2fUt2vMhXzH8smf=ErlrHm4t1HF431DLZbI98rzKBQz-W=7bqKQQTdUjKK0PypPfuyKp6XEYjyqWhmLO14CSYM1IjZ7_vNTQ4hoeQq-FxaekXkgh6nT=AD5UDyfYVHL3jQ1fvR1=BC=YtD=wa7oMorpBao3IRnS2XrbW0XnE0OhF1LmCEqSB44ks=lCKbUqZbB9jM_VNmrufIdkW1ICVQOgWbIVzjiJsoSMOxqNKB_JOVikCaDiaP0lBKdCKSUCIQ9CbnQb=ytp5hTOw994n8EhPh3Ab=KUtyiRBdfx9uG7QhkI3NY2Wm-hDdnTUjz7h0BIlCBX4NA0BtKRGC9gYxWJ=17kxqa5O1=vA4fM4FR9vhLhBiJVzC8FTjmQAdCG6AoMpOWl=FK_jkz7pYFkOfMUQgn4mQaD2h2mVe1Ar_D5_aZzYrHvTtaZzkE=Ag4eCZVHkPolTxLJRxQdaWttsJb1-p8=TrI0PNGGMuPT72wkPB1ECFA_MpmIss31yGq6HYSPgkks7s62AufPEuR_W_Dmu7aXJwDuzj04h=mINeUdWrjVNIixGkV00lWDbod4_7LZrGdr=FORh75BNihwxWv826bFx5B5oOqf53Bpw1N1==u_q=vzGu5nBU=7VPxGd3KKJS4Qg=nTJOK3fy9Us2jJXQAEIjjUMxCz_9voYof8h5jL3IeThVk6aDwUF8AQxmAC45bEIJkwvz9rpw_XzI9ZoG5oLSYm0ZjwdHO5lz5X1dpVIq3ishaUCQs6huI1Ean8b5wv-fDYkbak2UO6JQzMGOxOjkunoIMt_7KOAnHrn5NbykMeZdxLm9YNBdUOOBqiYa6QhSDfzP3Rv5qt0liVL8lFlKPt1p=OrAD3WAza=SFnRKgO2IjFFvhJwx330bS_6G3yEa7PXQrn-VhfYGGDAOsGpevTC762f4ECL6pUVCO-FuiiGXqYYL=HZJMOKHYMie4AEJBbAehKltGb-_0Q5hglBHxb6daWODMKV_xR8LiqNlAKhPAJqvBr42Y=tBWkxWDYofC_ud=q1oWYkRXVvJaAEdNbdGA7D8=hYm92mBrbeXhJ9upMIRaixPrqPEtjXGyyfA_Cm8uIXEVJOvA6gDZvo-V0IFnwtBq_kC02jaQX9ri_X3kIJ8VE_J0o4CW=aROn5SaHV6HgYwRQs2LCi0wEIe7KXSmPRvEKuEKkb7eSnR6XqFM2XVl9GAJzWkpOHUaCdaBG4EMemzN8tdagduD_ECntoVUfrZ8TpAVOLwIyRFOXtHWXLQGOUOy=zHFI3SZbltn-Bd3idsphoCux_0Fph9bA=iVmveJMIuPU-bFloUUSjXUmYbqwKWzCWQaG8DvQaK=k1WPHFF_U2=iktBvjklfEo=4yPHeqIJD=2Puoda8v8jlLgAwC1CWhbNmNsUZK7ERPOWRGaOTydXheIyGUGMkSWv8=mkHOGXYO=mzG6",
+            "X-C1agk3na-B": "bfukaj",
+            "X-C1agk3na-C": "AKDMX5WNAQAA8ilyjiNnyqPq1NKng6eQvrZ_hoNAj7WFBr73nOHNYqV342ue",
+            "X-C1agk3na-D": "ABaAhIDBCKGFgQGAAYIQgISigaIAwBGAzvpCzi_33wfhzWKld-NrngAAAABSQe9sAFxjquurJHxmpAyrHSocJro",
+            "X-C1agk3na-F": "A1iwYJWNAQAA9C-WxDu5d4b0D_w5Iw_96CKw6vE9Q_kIMYitQ2ATpYYhU0ZbAUOmNvWuclIDwH8AAEB3AAAAAA==",
+            "X-C1agk3na-Z": "q",
+            #"Cookie": "aH1sihCg=AwApjZWNAQAAH9wloCxIjF_wztZOXZ-rIlyrTtloPikSyNSwGeu7yr5jsPmbAUOmNvWuclIDwH8AAEB3AAAAAA|1|1|175080ef8ed79949ecd991a4279dc1572b5811f8",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+            }
 
-params = params = {
-    "consumerCode": "HDC001",
-    "searchTerm": "Urgent Care Facility",
-    "providerGroupCodes": "O",
-    "medicalProductCode": "V2V",
-    "medicalMpoCode": "CO002",
-    "medicalNpoCode": "CO002",
-    "dentalProductCode": "ADP",
-    "dentalPlanDescription": "No Plan Selected",
-    "pharmacyProductCode": "RX0100",
-    "pharmacyNetworkCode": "0100",
-    "behavioralProductCode": "MHSR",
-    "behavioralNetworkCode": "6",
-    "specialtyCode": "UC",
-    "city": "Lakewood",
-    "stateCode": "CO",
-    "zipCode": "80401",
-    "searchLocation": "Lakewood, CO 80401",
-    "latitude": "39.73984822",
-    "longitude": "-105.1969097",
-    "limit": "20",
-    "offset": "0",
-    "searchCategoryType": "place-of-care",
-    "categoryId": "91121",
-    "fields": "providers,sortTypes,contextMessages,disclaimerCodes,alertCode",
-    "channel": "public"
-}
-# Send the GET request with headers and params
-response = requests.get(url, headers=headers, params=params)
-print(response.text)
-data = response.json()
-urgent_cares = data['searchResult']['providerGroups'][0]['providers']
-print(urgent_cares)
-output = []
-for urgent_care in urgent_cares:
-    try:
-        location = {}
-        location["fullName"] = urgent_care["name"]
-        location["address"] = {"line1": urgent_care['locations'][0]["streetName"],
-                                "city": urgent_care['locations'][0]["city"],
-                                "state": urgent_care['locations'][0]["stateCode"],
-                                "zip": urgent_care['locations'][0]["zipCode"]
-        }
-        location["latitude"] = urgent_care['locations'][0]["latitude"]
-        location["longitude"] = urgent_care['locations'][0]["longitude"]
-        location["phone"] = urgent_care['locations'][0]["phones"][0]
-        
-        
-        if location not in output:
-            print(location)
-            output.append(location)
-    except Exception as e:
-        print(e)
+
+    params = params = {
+        "consumerCode": "HDC001",
+        "searchTerm": "Urgent Care Facility",
+        "providerGroupCodes": "O",
+        "medicalProductCode": "V2V",
+        "medicalMpoCode": "CO002",
+        "medicalNpoCode": "CO002",
+        "dentalProductCode": "ADP",
+        "dentalPlanDescription": "No Plan Selected",
+        "pharmacyProductCode": "RX0100",
+        "pharmacyNetworkCode": "0100",
+        "behavioralProductCode": "MHSR",
+        "behavioralNetworkCode": "6",
+        "specialtyCode": "UC",
+        "zipCode": zipcode,
+        "limit": "20",
+        "offset": "0",
+        "searchCategoryType": "place-of-care",
+        "categoryId": "91121",
+        "fields": "providers,sortTypes,contextMessages,disclaimerCodes,alertCode",
+        "channel": "public"
+    }
+    # Send the GET request with headers and params
+    working = False
+    i = 0
+    while not working:
+        response = requests.get(url, headers=headers, params=params)
+        try:
+            i += 1
+            print(i)
+            data = response.json()
+            working = True
+        except:
+            if i > 10:
+                return []
+            continue
+        urgent_cares = data['searchResult']['providerGroups'][0]['providers']
+        print(urgent_cares)
+        output = []
+        for urgent_care in urgent_cares:
+            try:
+                location = {}
+                location["fullName"] = urgent_care["name"]
+                location["address"] = {"line1": urgent_care['locations'][0]["streetName"],
+                                        "city": urgent_care['locations'][0]["city"],
+                                        "state": urgent_care['locations'][0]["stateCode"],
+                                        "zip": urgent_care['locations'][0]["zipCode"]
+                }
+                location["latitude"] = urgent_care['locations'][0]["latitude"]
+                location["longitude"] = urgent_care['locations'][0]["longitude"]
+                location["phone"] = urgent_care['locations'][0]["phones"][0]
+                
+                
+                if location not in output:
+                    print(location)
+                    output.append(location)
+            except Exception as e:
+                print(e)
 '''
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
@@ -77,3 +84,6 @@ if response.status_code == 200:
 else:
     print("Request failed with status code:", response.status_code)
 '''
+
+if __name__ == "__main__":
+    get_data(80401, "Choice PPO")
