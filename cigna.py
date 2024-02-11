@@ -1,57 +1,6 @@
 import requests
-import selenium
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-
-import time
 
 
-
-
-PATH = "c:/Program Files (x86)/chromedriver.exe"
-service = Service(executable_path=PATH)
-driver = webdriver.Chrome(service=service)
-driver.get("https://hcpdirectory.cigna.com/web/public/consumer/directory/search")
-
-
-location = '80401'
-text_box = driver.find_element(by=By.CSS_SELECTOR, value='[data-test-id="input-geolocation-search"]')
-text_box.send_keys(location)
-time.sleep(.1)
-text_box.send_keys(Keys.DOWN)
-text_box.send_keys(Keys.ENTER)
-time.sleep(.2)
-button = driver.find_element(by=By.CSS_SELECTOR, value='button[data-test-id="button-search-tile"]')
-button.click()
-
-search_input = driver.find_element(by=By.NAME, value='category-search-form')
-search_input.send_keys("Urgent Care")
-
-
-time.sleep(10)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
 
 url = "https://p-hcpdirectory-waf.hcpdirectory.cigna.com/public/directory-provider/v1/providers"
 
@@ -61,7 +10,9 @@ headers = {"X-C1agk3na-A":"KVlcKa3BHpNJA3IFuqutvB2z6t97zzJ3G5jCLYItIctfsYmP2JAWJ
            "X-C1agk3na-D": "ABaAhIDBCKGFgQGAAYIQgISigaIAwBGAzvpCzi_33wew0wz07hoS0AAAAABSQe9sANY312MFoKyu-c87h7ctOqA",
            "X-C1agk3na-F": "A0nhFJWNAQAA5FsMIHkhMWNTdiv1DYqcWSLbnGmFEnRGAQAnR9z2quDZCoBFAUOmNvWuclIDwH8AAEB3AAAAAA==",
            "X-C1agk3na-Z": "q",
-           "Cookie": "aH1sihCg=A_V1FZWNAQAAXfVewKVVjRmhUEKwGGwL1FJxaxWtiyJfEapf5XrEkqfKalYOAUOmNvWuclIDwH8AAEB3AAAAAA|1|1|a24d5c1651019e2c791da76fd433094ee5d91757;"}
+           "Cookie": "aH1sihCg=A_V1FZWNAQAAXfVewKVVjRmhUEKwGGwL1FJxaxWtiyJfEapf5XrEkqfKalYOAUOmNvWuclIDwH8AAEB3AAAAAA|1|1|a24d5c1651019e2c791da76fd433094ee5d91757;",
+           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+           }
 
 params = params = {
     "consumerCode": "HDC001",
@@ -101,5 +52,3 @@ if response.status_code == 200:
         print(data)
 else:
     print("Request failed with status code:", response.status_code)
-
-"""

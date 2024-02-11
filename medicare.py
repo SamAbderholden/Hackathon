@@ -26,7 +26,7 @@ def get_data(location):
     payload = {
         "type":"Hospital",
         "filters":{"radiusSearch":{"coordinates":{"lon":long,"lat":lat},
-        "radius":25},
+        "radius":50},
         "emergencyServices":[True]},
         "page":1,"limit":50,"returnAllResults":False,
         "sort":["closest","rank","alpha"]

@@ -20,7 +20,7 @@ def get_data(zipcode, plan):
 
         params = {
             'searchText': 'Urgent%20Care',
-            'distance': '25',
+            'distance': '50',
             'productIdentifier': '~MPPO',
             'state': 'CO',
             'listFieldSelections': 'acceptedVersion_wjtk0,affiliations',

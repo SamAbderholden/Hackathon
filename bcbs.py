@@ -9,7 +9,7 @@ def get_data(plan, location):
         "key": "Urgent Care",
         "location": location,
         "query": "Urgent Care",
-        "radius": 25,
+        "radius": 50,
         "searchCategory": "ORG_SUBTYPE",
         "searchType": "SYNONYM_ORGANIZATION"
     }
