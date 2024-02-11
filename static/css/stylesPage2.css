@@ -12,6 +12,18 @@ body, html {
     overflow: hidden; /* You may want to allow overflow if the map needs scrolling */
 }
 
+#backButton {
+    position: fixed; /* Position the button fixed */
+    top: 30px; /* Move it a little bit lower */
+    left: 20px; /* Move it a little bit to the right */
+    width: 60px; /* Increase the width */
+    height: 30px; /* Increase the height */
+    background-color: transparent; /* Make the button white */
+    color: white; /* Make the text color black so it's visible on the white background */
+    text-decoration: none; /* Remove the underline */
+    font-size: 30px;
+}
+
 #titleBlock {
     width: 100%;
     background-color: black; /* Or any other color you prefer */
